@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family : "Light";
+    src : url("../fonts/SFUIDisplay/Light.eot");
+    src : url("../fonts/SFUIDisplay/Light.eot?#iefix") format("embedded-opentype"),
+     	  url("../fonts/SFUIDisplay/Light.woff") format("woff"),
+     	  url("../fonts/SFUIDisplay/Light.ttf") format("truetype");
+   	font-style : normal;
+    font-weight : normal;
+	}
+
+@font-face {
+    font-family : "Regular";
+    src : url("../fonts/SFUIDisplay/Regular.eot");
+    src : url("../fonts/SFUIDisplay/Regular.eot?#iefix") format("embedded-opentype"),
+     	  url("../fonts/SFUIDisplay/Regular.woff") format("woff"),
+     	  url("../fonts/SFUIDisplay/Regular.otf") format("opentype"),
+     	  url("../fonts/SFUIDisplay/Regular.ttf") format("truetype");
+   	font-style : normal;
+    font-weight : normal;
+	}
+
+@font-face {
+	font-family: "Bold";
+	src : url("../fonts/SFUIDisplay/Bold.eot");
+	src : url("../fonts/SFUIDisplay/Bold.eot?#iefix") format("embedded-opentype"),
+		  url("../fonts/SFUIDisplay/Bold.woff") format("woff"),
+		  url("../fonts/SFUIDisplay/Bold.otf") format("opentype"),
+     	  url("../fonts/SFUIDisplay/Bold.ttf") format("truetype");
+	font-style : normal;
+	font-weight : normal;
+	}
+	
+@font-face {
+	font-family: "Black";
+	src : url("../fonts/SFUIDisplay/Black.eot");
+	src : url("../fonts/SFUIDisplay/Black.eot?#iefix") format("embedded-opentype"),
+		  url("../fonts/SFUIDisplay/Black.woff") format("woff"),
+		  url("../fonts/SFUIDisplay/Black.ttf") format("truetype");
+	font-style : normal;
+	font-weight : normal;
+	}
+	
+@font-face {
+	font-family: "Heavy";
+	src : url("../fonts/SFUIDisplay/Heavy.eot");
+	src : url("../fonts/SFUIDisplay/Heavy.eot?#iefix") format("embedded-opentype"),
+		  url("../fonts/SFUIDisplay/Heavy.woff") format("woff"),
+		  url("../fonts/SFUIDisplay/Heavy.otf") format("opentype");
+	font-style : normal;
+	font-weight : normal;
+	}
