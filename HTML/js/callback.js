@@ -134,3 +134,13 @@ $(document).ready(function() {
 	$('input[type=tel]').inputmask('+7 (999) 999-99-99');
 	return false;
 	});
+	
+	
+$(document).mouseup(function(e) {
+	if (!$("div.form.cb").is(e.target) && $("div.form.cb").has(e.target).length === 0 && $("div.form.cb:visible").length !== 0) {
+		if ($("div.callback").hasClass("opened")) {
+			$("div.callback").removeClass("opened");
+			}
+    	}
+    return false;
+	});

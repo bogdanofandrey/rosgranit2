@@ -47,7 +47,7 @@ div.form > form > ul > li > input + span::before {
 	top : calc(100% + 40px);
 	left : 0;
 	z-index : 10;
-	width : 100%;
+	width : 0;
 	height : 3px;
 	content : ".";
 	text-indent : -999em;
