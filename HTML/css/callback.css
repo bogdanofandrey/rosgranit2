@@ -1,0 +1,167 @@
+@charset "UTF-8";
+
+div.callback {
+	display : none;
+	position : absolute;
+	z-index : 100;
+	padding-top : 60px;
+	}
+	
+div.callback.opened {
+	display : flex;
+  	justify-content : center;
+  	align-content : space-between;
+  	align-items : center;
+  	flex-direction : column;
+	}
+	
+div.callback.opened + div.container::before {
+	position : absolute;
+	top : 0;
+	left : 0;
+	z-index : 10;
+	width : 100%;
+	height: 100%;
+	background-color : rgba(26, 26, 26, 0.85);
+	content : "";
+	}
+
+div.callback.opened + div.container > * {
+  	-webkit-filter : url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8ZmlsdGVyIGlkPSJibHVyIj4KICAgICAgICA8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIxMiIgLz4KICAgIDwvZmlsdGVyPgo8L3N2Zz4=#blur");
+ 	-webkit-filter : blur(3px);   
+			filter : url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8ZmlsdGVyIGlkPSJibHVyIj4KICAgICAgICA8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIxMiIgLz4KICAgIDwvZmlsdGVyPgo8L3N2Zz4=#blur");
+			filter : blur(3px);		
+	}
+	
+div.callback > button {
+	position : absolute;
+	top : 0;
+	right : 0;
+	z-index : 10;
+    width : 40px;
+    height : 40px;
+    margin-bottom : 10px;
+	background-color : rgba(0, 0, 0, 0);
+	border : 0;
+	transition : all 0.25s ease;
+	}
+	
+div.callback > button:hover {
+	transform : scale(1.2);
+	cursor : pointer;
+	}
+	
+div.callback > button:hover::before, 
+div.callback > button:hover::after {
+	background-color : rgba(255, 255, 255, 1);
+	}
+	
+div.callback > button::before, 
+div.callback > button::after {
+    position : absolute;
+    top : 50%;
+    left : 50%;
+    background-color : rgba(88, 88, 88, 1);
+    content : '.';
+    text-indent : -999em;
+    transform : rotate(45deg);
+    overflow : hidden;
+    transition : all 0.25s ease;
+	}
+	
+div.callback > button::before {
+    margin : -15px 0 0 -1px;
+    width : 2px;
+    height : 30px;
+	}
+	
+div.callback > button::after {
+    margin : -1px 0 0 -15px;
+    width : 30px;
+    height : 2px;
+	}
+	
+div.callback > div.form {
+	max-width : 340px;
+	font : normal 16px/24px "Regular", Arial, Tahoma, Verdana, sans-serif;
+	}
+	
+div.callback > div.form > span {
+	display : block;
+	white-space : nowrap;
+	color : rgba(255, 255, 255, 1);
+	}
+	
+div.callback > div.form > span,
+div.callback > div.form > p {
+	text-align : center;
+	}
+	
+div.callback > div.form > form > button {
+	margin : 15px 0 0 0 !important;
+	}
+	
+@media (min-width : 1401px) {
+	div.callback {
+		top : 60px;
+		left : 60px;
+		width : calc(100% - 120px);
+		min-height : calc(100% - 120px);
+		}
+
+	div.callback > div.form > span {
+		font : normal 36px/36px "Bold", Arial, Tahoma, Verdana, sans-serif;
+		}
+	}
+	
+@media (min-width : 1041px) and (max-width : 1400px) {
+	div.callback {
+		top : 50px;
+		left : 50px;
+		width : calc(100% - 100px);
+		min-height : calc(100% - 100px);
+		}
+		
+	div.callback > div.form > span {
+		font : normal 36px/36px "Bold", Arial, Tahoma, Verdana, sans-serif;
+		}
+	}
+	
+@media (min-width : 721px) and (max-width : 1040px) {
+	div.callback {
+		top : 40px;
+		left : 40px;
+		width : calc(100% - 80px);
+		min-height : calc(100% - 80px);
+		}
+		
+	div.callback > div.form > span {
+		font : normal 24px/24px "Bold", Arial, Tahoma, Verdana, sans-serif;
+		}
+	}
+	
+@media (min-width : 481px) and (max-width : 720px) {
+	div.callback {
+		top : 30px;
+		left : 30px;
+		width : calc(100% - 60px);
+		min-height : calc(100% - 60px);
+		}
+		
+	div.callback > div.form > span {
+		font : normal 24px/24px "Bold", Arial, Tahoma, Verdana, sans-serif;
+		}
+	}
+	
+@media (max-width : 480px) {
+	div.callback {
+		top : 20px;
+		left : 20px;
+		width : calc(100% - 40px);
+		min-height : calc(100% - 40px);
+		}
+		
+	div.callback > div.form > span {
+		font : normal 24px/24px "Bold", Arial, Tahoma, Verdana, sans-serif;
+		}
+	}

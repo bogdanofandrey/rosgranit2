@@ -8,10 +8,38 @@
     	<link rel="stylesheet" href="css/default.css?170220191338" />
     	<link rel="stylesheet" href="css/style.css?170220191338" />
     	<link rel="stylesheet" href="css/footer.css?170220191338" />
+    	<link rel="stylesheet" href="css/form.css?170220191338" />
+    	<link rel="stylesheet" href="css/callback.css?170220191338" />
 		<script defer src="js/jquery.js?170220191338"></script>
+		<script defer src="js/inputmask.js?170220191338"></script>
+		<script defer src="js/callback.js?170220191338"></script>
 		<title>«Росгранит» — вечные ценности и гармония</title>
 	</head>
 	<body onload="resize();" onresize="resize();">
+		<div class="callback opened">
+			<button type="button"></button>
+			<div class="form cb">
+				<span>Обратный звонок</span>
+				<p>Оставьте Ваш контактный номер телефона и в ближайшее время мы Вам перезвоним!</p>
+				<form name="application" method="post" action="#" target="actions">
+					<ul>
+						<li>
+							<input class="field" type="text" name="uname" value="" data-form="cb" />
+							<span>
+								<span>Ваше имя</span>
+							</span>
+						</li>
+						<li class="required">
+							<input class="field" type="tel" name="uphone" value="" data-form="cb" />
+							<span>
+								<span>Ваш телефон</span>
+							</span>
+						</li>
+					</ul>
+					<button type="button" data-form="cb">Перезвоните мне</button>
+				</form>
+			</div>
+		</div>
 		<div class="container">
 			<header></header>
 			<footer>
@@ -19,7 +47,7 @@
 					<ul>
 						<li>
 							<a href="#" title="«Росгранит» — вечные ценности и гармония"></a>
-							<p>&copy; 2001&ndash;2018, ТПО&nbsp;«Росгранит»<br />
+							<p>&copy; 2001&ndash;2019, ТПО&nbsp;«Росгранит»<br />
 							<a href="#" title="Политика конфиденциальности">Политика конфиденциальности</a></p>
 						</li>
 						<li>
