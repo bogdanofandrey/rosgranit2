@@ -14,8 +14,7 @@ div.callback.opened {
   	align-items : center;
   	flex-direction : column;
 	}
-	
-/* div.callback.opened + div.container::before { */
+
 div.callback.opened + span {
 	display : block;
 	position : absolute;
@@ -27,7 +26,6 @@ div.callback.opened + span {
 	background-color : rgba(26, 26, 26, 0.9);
 	}
 
-/* div.callback.opened + div.container > * { */
 div.callback.opened + span + div.container {
   	-webkit-filter : url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8ZmlsdGVyIGlkPSJibHVyIj4KICAgICAgICA8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIxMiIgLz4KICAgIDwvZmlsdGVyPgo8L3N2Zz4=#blur");
  	-webkit-filter : blur(3px);
