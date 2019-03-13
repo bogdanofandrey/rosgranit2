@@ -30,9 +30,6 @@ div.container > footer > div > ul {
 	display : -webkit-box;
 	display : -webkit-flex;
 	display : -ms-flexbox;
-	flex-wrap : wrap;
-	-webkit-flex-wrap : wrap;
-	-ms-flex-wrap : wrap;
 	max-width : 1280px;
 	}
 
@@ -304,6 +301,12 @@ div.container > footer > div > ul > li > a.developer::before {
 		}
 		
 	div.container > footer > div > ul {
+		flex-wrap : wrap;
+		-webkit-flex-wrap : wrap;
+		-ms-flex-wrap : wrap;
+		}
+		
+	div.container > footer > div > ul {
 		padding : 0 260px 0 160px;
 		}
 	
@@ -351,6 +354,12 @@ div.container > footer > div > ul > li > a.developer::before {
 		padding-right : 30px;
 		padding-bottom : 15px;
 		padding-left : 30px;
+		}
+		
+	div.container > footer > div > ul {
+		flex-wrap : wrap;
+		-webkit-flex-wrap : wrap;
+		-ms-flex-wrap : wrap;
 		}
 		
 	div.container > footer > div > ul,
@@ -405,6 +414,12 @@ div.container > footer > div > ul > li > a.developer::before {
 		padding-right : 20px;
 		padding-bottom : 10px;
 		padding-left : 20px;
+		}
+
+	div.container > footer > div > ul {
+		flex-wrap : wrap;
+		-webkit-flex-wrap : wrap;
+		-ms-flex-wrap : wrap;
 		}
 
 	div.container > footer > div > ul,
