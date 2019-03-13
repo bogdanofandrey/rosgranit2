@@ -50,8 +50,10 @@ div.form > form > ul > li > input + span::before {
 	width : 100%;
 	height : 3px;
 	content : ".";
+	text-indent : -999em;
 	background-color : rgba(213, 38, 38, 1);
 	transition : all 0.25s ease;
+	overflow : hidden;
 	}
 	
 div.form > form > ul > li > input.error + span::before {
