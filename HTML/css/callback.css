@@ -15,15 +15,16 @@ div.callback.opened {
   	flex-direction : column;
 	}
 	
-div.callback.opened + div.container::before {
+/* div.callback.opened + div.container::before { */
+div.callback.opened + span {
+	display : block;
 	position : absolute;
 	top : 0;
 	left : 0;
 	z-index : 10;
 	width : 100%;
 	height: 100%;
-	background-color : rgba(26, 26, 26, 0.85);
-	content : "";
+	background-color : rgba(26, 26, 26, 0.9);
 	}
 
 /* div.callback.opened + div.container > * {
