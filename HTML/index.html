@@ -4,18 +4,21 @@
     	<meta charset="UTF-8" />
     	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
     	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0" />
-    	<link rel="stylesheet" href="css/fonts.css?170220191944" />
-    	<link rel="stylesheet" href="css/default.css?170220191944" />
-    	<link rel="stylesheet" href="css/style.css?170220191944" />
-    	<link rel="stylesheet" href="css/footer.css?170220191944" />
-    	<link rel="stylesheet" href="css/form.css?170220191944" />
-    	<link rel="stylesheet" href="css/callback.css?170220191944" />
-		<script defer src="js/jquery.js?170220191944"></script>
-		<script defer src="js/inputmask.js?170220191944"></script>
-		<script defer src="js/callback.js?170220191944"></script>
+    	<link rel="stylesheet" href="css/fonts.css?170220191948" />
+    	<link rel="stylesheet" href="css/default.css?170220191948" />
+    	<link rel="stylesheet" href="css/style.css?170220191948" />
+    	<link rel="stylesheet" href="css/header.css?170220191948" />
+    	<link rel="stylesheet" href="css/nav.css?170220191948" />
+    	<link rel="stylesheet" href="css/footer.css?170220191948" />
+    	<link rel="stylesheet" href="css/form.css?170220191948" />
+    	<link rel="stylesheet" href="css/callback.css?170220191948" />
+		<script defer src="js/jquery.js?170220191948"></script>
+		<script defer src="js/template.js?170220191948"></script>
+		<script defer src="js/inputmask.js?170220191948"></script>
+		<script defer src="js/callback.js?170220191948"></script>
 		<title>«Росгранит» — вечные ценности и гармония</title>
 	</head>
-	<body>
+	<body onload="resize();" onresize="resize();">
 		<div class="callback">
 			<button type="button"></button>
 			<div class="form cb">
@@ -40,14 +43,46 @@
 				</form>
 			</div>
 		</div>
-		<span></span>
 		<div class="container">
-			<header></header>
+			<span></span>
+			<header>
+				<div>
+					<ul class="sandwich">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<a class="logo" href="/" title="Росгранит"></a>
+					<a class="phone" href="tel:+74952252550" title="+7 (495) 225-25-50">+7 (495) 225-25-50</a>
+				</div>
+			</header>
+			<nav>
+				<div>
+					<ul>
+						<li>
+							<a href="#" title="Продукция">Продукция</a>
+						</li>
+						<li>
+							<a href="#" title="О нас">О нас</a>
+						</li>
+						<li>
+							<a href="#" title="Услуги">Услуги</a>
+						</li>
+						<li>
+							<a href="#" title="Статьи">Статьи</a>
+						</li>
+						<li>
+							<a href="#" title="Контакты">Контакты</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
 			<footer>
 				<div>
 					<ul>
 						<li>
-							<a href="#" title="«Росгранит» — вечные ценности и гармония"></a>
+							<a href="#" title="Росгранит"></a>
 							<p>&copy; 2001&ndash;2019, ТПО&nbsp;«Росгранит»<br />
 							<a href="#" title="Политика конфиденциальности">Политика конфиденциальности</a></p>
 						</li>
