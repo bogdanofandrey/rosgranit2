@@ -20,11 +20,11 @@ div.container > header > div {
 	}
 	
 div.container > header > div > a.logo,
-div.container > header > div > a.phone,
-div.container.opened > header > div > a.phone {
+div.container > header > div > a.phone {
 	display : block;
 	position : absolute;
 	z-index : 10;
+	text-decoration : none;
 	}
 	
 div.container > header > div > a.logo {
@@ -59,7 +59,6 @@ div.container > header > div > a.logo:hover::before  {
 div.container > header > div > a.phone {
 	right : 0;
 	font : normal 18px/22px "Bold", Arial, Tahoma, Verdana, sans-serif;
-	text-decoration : none;
 	color : rgba(88, 88, 88, 1);
 	transition : all 0.25s ease;
 	}
@@ -196,6 +195,7 @@ div.container.opened > header > div > ul.sandwich > li:nth-child(2) { transform 
 		}
 		
 	div.container.opened > header > div > a.phone {
+		display : block;
 		left : -20px;
 		top : calc(100vh - 40px);
 		width : 260px;
