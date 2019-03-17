@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+@media (min-width : 1401px) {
+	div.container > article {
+		padding : 60px 0;
+		}
+	}
+	
+@media (min-width : 1041px) and (max-width : 1400px) {
+	div.container > article {
+		padding : 50px 0;
+		}
+	}
+	
+@media (min-width : 861px) and (max-width : 1040px) {
+	div.container > article {
+		padding : 40px 0;
+		}
+	}
+	
+@media (min-width : 481px) and (max-width : 860px) {
+	div.container > article {
+		padding : 30px 0;
+		}
+	}
+	
+@media (max-width : 480px) {
+	div.container > article {
+		padding : 20px 0;
+		}
+	}

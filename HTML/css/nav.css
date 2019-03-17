@@ -20,6 +20,7 @@ div.container > nav > div > ul > li > a {
 	position : relative;
 	text-decoration : none;
 	color : rgba(88, 88, 88, 1);
+	transition : color 0.25s ease;
 	}
 	
 div.container > nav > div > ul > li > a::before {
@@ -60,7 +61,7 @@ div.container > nav > div > ul > li > a:hover::before {
 		
 	div.container > nav > div > ul > li > a {
 		padding-top : 45px;
-		font : normal 18px/22px "Regular", Arial, Tahoma, Verdana, sans-serif;
+		font : normal 16px/24px "Regular", Arial, Tahoma, Verdana, sans-serif;
 		}
 	}
 
@@ -72,7 +73,7 @@ div.container > nav > div > ul > li > a:hover::before {
 		}
 		
 	div.container > nav > div {
- 		left : 310px;
+ 		left : 345px;
  		}
  		
  	div.container > nav > div > ul > li:not(:last-child) {
@@ -87,7 +88,7 @@ div.container > nav > div > ul > li > a:hover::before {
 		}
 		
 	div.container > nav > div {
- 		left : 350px;
+ 		left : 360px;
  		}
  		
  	div.container > nav > div > ul > li:not(:last-child) {
@@ -102,7 +103,7 @@ div.container > nav > div > ul > li > a:hover::before {
 		}
 		
 	div.container > nav > div {
- 		left : 200px;
+ 		left : 220px;
  		}
  		
  	div.container > nav > div > ul > li:not(:last-child) {
@@ -141,7 +142,7 @@ div.container > nav > div > ul > li > a:hover::before {
 		}
 		
 	div.container > nav > div > ul > li > a {
-		font : normal 18px/40px "Regular", Arial, Tahoma, Verdana, sans-serif;
+		font : normal 16px/40px "Regular", Arial, Tahoma, Verdana, sans-serif;
 		}
 		
 	div.container > nav > div > ul > li > a::before {
