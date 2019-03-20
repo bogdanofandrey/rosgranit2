@@ -120,6 +120,7 @@ div.container > nav > div > ul > li > a:hover::before {
 		width : 260px;
 		height : calc(100% - 80px);
 		max-height : calc(100vh - 80px);
+		padding : 60px 0;
 		}
 		
 	div.container.opened > nav {
@@ -128,7 +129,7 @@ div.container > nav > div > ul > li > a:hover::before {
 		}
 		
 	div.container > nav > div {
-		padding : 60px 0 40px 0;
+		height : 100%;
 		}
 		
 	div.container > nav > div > ul {

@@ -36,31 +36,21 @@ a { text-decoration : underline; }
 a:hover { text-decoration : none; }
 	
 @media (min-width : 1401px) {
-	body {
-		font : normal 18px/30px "Regular", Arial, Tahoma, Verdana, sans-serif;
-		}
+
 	}
 	
 @media (min-width : 1041px) and (max-width : 1400px) {
-	body {
-		font : normal 18px/30px "Regular", Arial, Tahoma, Verdana, sans-serif;
-		}
+
 	}
 	
 @media (min-width : 861px) and (max-width : 1040px) {
-	body {
-		font : normal 16px/26px "Regular", Arial, Tahoma, Verdana, sans-serif;
-		}
+
 	}
 	
 @media (min-width : 481px) and (max-width : 860px) {
-	body {
-		font : normal 16px/26px "Regular", Arial, Tahoma, Verdana, sans-serif;
-		}
+
 	}
 	
 @media (max-width : 480px) {
-	body {
-		font : normal 14px/22px "Regular", Arial, Tahoma, Verdana, sans-serif;
-		}
+
 	}
