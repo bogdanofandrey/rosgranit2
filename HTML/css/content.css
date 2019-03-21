@@ -1,193 +1,185 @@
 @charset "UTF-8";
 
-div.container > article > div.brief,
-div.container > article > div.content {
-	position : relative;
-	margin : 0 auto;
+div.container > article > div.content > img {
+	display : block;
+	width : 100%;
+	height : auto;
 	}
-
-div.container > article > div.brief {
-	max-width : 1280px;
-	text-align : center;
+	
+div.container > article > div.content > div.accent {
+	position : relative;
 	color : rgba(143, 143, 143, 1);
 	}
-
-div.container > article > div.content {
-	max-width : 960px;
-	}
 	
-div.container > article strong {
-	color : rgba(255, 255, 255, 1);
-	}
-
-div.container > article h1,
-div.container > article h2,
-div.container > article h3 {
-	position : relative;
-	color : rgba(255, 255, 255, 1);
-	text-align : center;
-	}
-
-div.container > article h1 {	
-	padding : 20px 0;
-	}
-	
-div.container > article h2,
-div.container > article h3 {	
-	padding : 15px 0;
-	}
-	
-div.container > article h1::before {
+div.container > article > div.content > div.accent::before {
 	position : absolute;
-	top : 100%;
-	left : calc(50% - 20px);
+	top : 0;
+	right : 0;
 	z-index : 10;
-	width : 40px;
-	height : 5px;
+	width: calc((100vw - 100%)/2 + 100%);
+	height : 100%;
+	background-color : rgba(30, 30, 30, 1);
 	content : "";
-	background-color : rgba(213, 38, 38, 1);
+	}
+
+div.container > article > div.content > div.accent > div {
+	position : relative;
+	z-index : 20;
 	}
 	
-div.container > article > div > ul {
+div.container > article > div.gallery {
+	position : relative;
+	padding : 0 50px;
+	margin : 30px auto;
+	overflow : hidden;
+	}
+	
+div.container > article > div.gallery > div.button {
+	position : absolute;
+	top : calc(50% - 25px);
+	z-index : 10;
+	width : 50px;
+	height : 50px;
+	background-color : rgba(213, 38, 38, 1);
+	cursor : pointer;
+	}
+	
+div.container > article > div.gallery > div.button.prev {
+	left : 0;
+	transform : rotate(180deg);
+	}
+	
+div.container > article > div.gallery > div.button.next {
+	right : 0;
+	}
+	
+div.container > article > div.gallery > div.button::after {
+	display : block;
+	position : absolute;
+	right : 1px;
+	top : 0;
+	z-index : 10;
+	width : 50px;
+	height : 50px;
+	background-image : url("../img/arrow.svg?110320191457");
+	background-repeat : no-repeat;
+	background-position : 50% 50%;
+	background-size : 11px 17px;	
+	content : "";
+	transition : right 0.25s ease;
+	}
+	
+div.container > article > div.gallery > div.button:hover::after {
+	right : -3px;
+	}
+	
+div.container > article > div.gallery > div.swiper {
+	width : 100%;
+	overflow : hidden;
+	}
+
+div.container > article > div.content > div.image,
+div.container > article > div.gallery > div.swiper > ul {
+	display : flex;
+	display : -webkit-box;
+	display : -webkit-flex;
+	display : -ms-flexbox;
+	}
+	
+div.container > article > div.gallery > div.swiper > ul {
 	padding : 0;
 	margin : 0;
 	list-style : none;
 	}
-	
-div.container > article > div > ul > li {
+
+div.container > article > div.gallery > div.swiper > ul > li > a {
 	position : relative;
-	padding-left : 20px;
-	}
-	
-div.container > article > div > ul > li::before {
-	position : absolute;
-	top : 10px;
-	left : 0;
-	z-index : 10;
-	width : 6px;
-	height : 6px;
-	border-radius : 50%;
-	background-color : rgba(213, 38, 38, 1);
-	content : "";
+	display : block;
+	width : inherit;
+	padding-top : 60%;
+	text-decoration : none;
+	overflow : hidden;
+	opacity : 0.75;
+	transition: opacity 0.25s ease;
 	}
 
+div.container > article > div.content > div.image > a:hover,	
+div.container > article > div.gallery > div.swiper > ul > li > a:hover {
+	opacity : 1;
+	}
+
+div.container > article > div.gallery > div.swiper > ul > li > a > img {
+	display : block;
+	width : inherit;
+	height : auto;
+	position : absolute;
+	top : 50%;
+	left : 50%;
+	z-index : 10;	
+	transform : translate(-50%, -50%);
+	}
+	
+div.container > article > div.content > div.image > a {
+	margin-bottom : 10px;
+	opacity : 0.75;
+	transition: opacity 0.25s ease;
+	}
+	
+div.container > article > div.content > div.image > a:not(:last-child) {
+	margin-right : 10px;
+	}
+	
+div.container > article > div.content > div.image > a > img {
+	width : 100%;
+	height : auto;
+	}
 
 @media (min-width : 1401px) {
-	div.container > article > div.brief,
-	div.container > article > div.content {
-		padding : 0 60px;
+	div.container > article > div.content > div.accent {
+		padding : 30px;
 		}
 		
-	div.container > article > div.brief {
-		font : normal 22px/32px "Regular", Arial, Tahoma, Verdana, sans-serif;
-		}
-	
-	div.container > article > div.content {
-		font : normal 20px/32px "Regular", Arial, Tahoma, Verdana, sans-serif;
-		}
-		
-	div.container > article h1 {
-		font : normal 38px/38px "Bold", Arial, Tahoma, Verdana, sans-serif;
-		}
-		
-	div.container > article h2,
-	div.container > article h3 {
-		font : normal 30px/30px "Bold", Arial, Tahoma, Verdana, sans-serif;
+	div.container > article > div.gallery {
+		max-width : 1280px;
 		}
 	}
 	
 @media (min-width : 1041px) and (max-width : 1400px) {
-	div.container > article > div.brief,
-	div.container > article > div.content {
-		padding : 0 50px;
+	div.container > article > div.content > div.accent {
+		padding : 25px;
 		}
 		
-	div.container > article > div.brief {
-		font : normal 20px/28px "Regular", Arial, Tahoma, Verdana, sans-serif;
-		}
-	
-	div.container > article > div.content {
-		font : normal 18px/28px "Regular", Arial, Tahoma, Verdana, sans-serif;
-		}
-		
-	div.container > article h1 {
-		font : normal 36px/36px "Bold", Arial, Tahoma, Verdana, sans-serif;
-		}
-		
-	div.container > article h2,
-	div.container > article h3 {
-		font : normal 28px/28px "Bold", Arial, Tahoma, Verdana, sans-serif;
+	div.container > article > div.gallery {
+		max-width : calc(100vw - 100px);
 		}
 	}
 	
 @media (min-width : 861px) and (max-width : 1040px) {
-	div.container > article > div.brief,
-	div.container > article > div.content {
-		padding : 0 40px;
+	div.container > article > div.content > div.accent {
+		padding : 20px;
 		}
 		
-	div.container > article > div.brief {
-		font : normal 20px/28px "Regular", Arial, Tahoma, Verdana, sans-serif;
-		}
-	
-	div.container > article > div.content {
-		font : normal 18px/28px "Regular", Arial, Tahoma, Verdana, sans-serif;
-		}
-		
-	div.container > article h1 {
-		font : normal 34px/34px "Bold", Arial, Tahoma, Verdana, sans-serif;
-		}
-		
-	div.container > article h2,
-	div.container > article h3 {
-		font : normal 26px/26px "Bold", Arial, Tahoma, Verdana, sans-serif;
+	div.container > article > div.gallery { 
+		max-width : calc(100vw - 80px);
 		}
 	}
 	
 @media (min-width : 481px) and (max-width : 860px) {
-	div.container > article > div.brief,
-	div.container > article > div.content {
-		padding : 0 30px;
+	div.container > article > div.content > div.accent {
+		padding : 15px;
 		}
 		
-	div.container > article > div.brief {
-		font : normal 18px/24px "Regular", Arial, Tahoma, Verdana, sans-serif;
-		}
-	
-	div.container > article > div.content {
-		font : normal 16px/24px "Regular", Arial, Tahoma, Verdana, sans-serif;
-		}
-		
-	div.container > article h1 {
-		font : normal 32px/32px "Bold", Arial, Tahoma, Verdana, sans-serif;
-		}
-		
-	div.container > article h2,
-	div.container > article h3 {
-		font : normal 24px/24px "Bold", Arial, Tahoma, Verdana, sans-serif;
+	div.container > article > div.gallery { 
+		max-width : 100vw;
 		}
 	}
 	
 @media (max-width : 480px) {
-	div.container > article > div.brief,
-	div.container > article > div.content {
-		padding : 0 20px;
+	div.container > article > div.content > div.accent {
+		padding : 10px;
 		}
 		
-	div.container > article > div.brief {
-		font : normal 18px/24px "Regular", Arial, Tahoma, Verdana, sans-serif;
-		}
-	
-	div.container > article > div.content {
-		font : normal 16px/24px "Regular", Arial, Tahoma, Verdana, sans-serif;
-		}
-		
-	div.container > article h1 {
-		font : normal 30px/30px "Bold", Arial, Tahoma, Verdana, sans-serif;
-		}
-		
-	div.container > article h2,
-	div.container > article h3 {
-		font : normal 22px/22px "Bold", Arial, Tahoma, Verdana, sans-serif;
+	div.container > article > div.gallery {
+		max-width : 100vw;
 		}
 	}
