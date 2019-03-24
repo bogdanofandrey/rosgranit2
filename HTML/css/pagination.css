@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+li.pagination {
+	position : relative;
+	width : 100% !important;
+	margin : 0 !important;
+	background : none !important;
+	border : 0 !important;
+	cursor : default !important;
+	}
+	
+li.pagination > ol {
+	position : relative;
+	display : flex;
+	display : -webkit-box;
+	display : -webkit-flex;
+	display : -ms-flexbox;
+	justify-content : center;
+	-webkit-justify-content : center;
+	-ms-justify-content : center;
+	width : 100%;
+	height : 100%;
+	max-width : 280px;
+	max-height : 40px;
+	margin : 0 auto;
+	padding : 0 40px;
+	counter-reset : my-counter;
+	overflow : hidden;
+	}
+	
+li.pagination > ol > li {
+	display : block;
+	font : normal 18px/40px "Regular", Arial, Tahoma, Verdana, sans-serif;
+	width : 40px;
+	height : 40px;
+	color : rgba(116, 116, 116, 1);
+	}
+
+li.pagination > ol > li > a,
+li.pagination > ol > li > span {
+	display : block;
+	position : relative;
+	width : 100%;
+	height : 100%;
+	color : inherit;
+	}
+	
+li.pagination > ol > li.page > a:before,
+li.pagination > ol > li.page > span:before {
+	content : counter(my-counter);
+	counter-increment : my-counter;
+	position : absolute;
+	top : 0;
+	left : 0;
+	z-index : 10;
+	font : normal 18px/40px "Regular", Arial, Tahoma, Verdana, sans-serif;
+	width : 100%;
+	height : 100%;
+	text-align : center;
+	transition : color 0.25s ease;
+	}
+	
+li.pagination > ol > li.page:hover > a:before,
+li.pagination > ol > li.page:hover > span:before {
+	color : rgba(213, 38, 38, 1) !important;
+	}
+	
+li.pagination > ol > li.page.selected > a:before,
+li.pagination > ol > li.page.selected > span:before { 
+	color : rgba(255, 255, 255, 1) !important;
+	}
+
+li.pagination > ol > li.prev,
+li.pagination > ol > li.next {
+	position : absolute;
+	top : 0;
+	z-index : 10;
+	background-color : rgba(213, 38, 38, 1);
+	}
+	
+li.pagination > ol > li.prev {
+	left : 0;
+	transform : rotate(180deg);
+	}
+
+li.pagination > ol > li.next {
+	right : 0;
+	}
+
+li.pagination > ol > li.prev > a:before,
+li.pagination > ol > li.next > a:before {
+	display : block;
+	position : absolute;
+	right : 0;
+	top : 0;
+	z-index : 10;
+	width : 100%;
+	height : 100%;
+	background-image : url("../img/arrow.svg?110320191457");
+	background-repeat : no-repeat;
+	background-position : 50% 50%;
+	background-size : 11px 17px;	
+	content : "";
+	transition : right 0.25s ease;
+	}
+	
+li.pagination > ol > li.prev:hover > a:before,
+li.pagination > ol > li.next:hover > a:before {
+	right : -2px;
+	}
