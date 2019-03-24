@@ -35,6 +35,10 @@ li.pagination > ol > li {
 	height : 40px;
 	color : rgba(116, 116, 116, 1);
 	}
+	
+li.pagination > ol > li > a {
+	text-decoration : none;
+	}
 
 li.pagination > ol > li > a,
 li.pagination > ol > li > span {
