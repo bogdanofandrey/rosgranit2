@@ -1,0 +1,182 @@
+@charset "UTF-8";
+
+div.container > article > div.accent > div > a.button {
+    display: block;
+    position: relative;
+    width: 280px;
+    height: 50px;
+    border: 0;
+    padding: 0 60px 0 20px;
+    margin: 10px auto;
+    background-color: rgba(213, 38, 38, 1);
+    color: rgba(255, 255, 255, 1);
+    font: normal 18px/50px "Bold", Arial, Tahoma, Verdana, sans-serif;
+    text-align : center;
+    text-decoration : none;
+    white-space : nowrap;
+	}
+
+div.container > article > div.accent > div {
+	background-color : rgba(34, 34, 34, 1);
+	}
+
+div.container > article > div > ul.service {
+	display : none;
+	}
+
+div.container > article > div > div.swiper-tabs > ul,	
+div.container > article > div > ul.service.selected {
+	display : flex;
+	display : -webkit-box;
+	display : -webkit-flex;
+	display : -ms-flexbox;
+	}
+	
+div.container > article > div > div.swiper-tabs {
+	position : relative;
+	overflow : hidden;
+	margin-bottom : 10px;
+	}
+	
+div.container > article > div > div.swiper-tabs > ul {
+	padding : 0;
+	margin : 0;
+	list-style : none;
+	}
+	
+div.container > article > div > div.swiper-tabs > ul > li {
+	position : relative;
+	margin-right : 40px;
+	padding-bottom : 10px;
+	color : rgba(78, 78, 78, 1);
+	white-space : nowrap;
+	transition : all 0.25s ease;
+	}
+	
+div.container > article > div > div.swiper-tabs > ul > li:last-child { 
+	margin-right : 0 !important; 
+	}
+	
+div.container > article > div > div.swiper-tabs > ul > li:hover {
+	color : rgba(255, 255, 255, 1);
+	cursor : pointer; 
+	}
+	
+div.container > article > div > div.swiper-tabs > ul > li.selected { 
+	color : rgba(255, 255, 255, 1);
+	cursor : default;
+	}
+
+div.container > article > div > div.swiper-tabs > ul > li.selected::before,
+div.container > article > div > div.swiper-tabs > ul > li.selected::after {
+	display : block;
+	position : absolute;
+	z-index : 10;
+	background-color : rgba(213, 38, 38, 1);
+	content : "";
+	}
+	
+div.container > article > div > div.swiper-tabs > ul > li.selected::after {
+	width : 100%;
+	height : 3px;
+	left : 0;
+	bottom : 2px;
+	}
+	
+div.container > article > div > div.swiper-tabs > ul > li.selected::before {
+	width : 4px;
+	height : 4px;
+	left : calc(50% - 2px);
+	bottom : 0;
+	transform : rotate(45deg);
+	} 
+
+@media (min-width : 1401px) {
+	div.container > article > div > div.swiper-tabs {
+		max-width : 1280px;
+		}
+		
+	div.container > article > div > div.swiper-tabs > ul > li > span {
+		font : normal 30px/44px "Regular", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > article > div.accent {
+		padding : 60px 60px 0 60px;
+		}
+		
+	div.container > article > div.accent > div {
+		padding : 30px;
+		}
+	}
+	
+@media (min-width : 1041px) and (max-width : 1400px) {
+	div.container > article > div > div.swiper-tabs {
+		max-width : 1280px;
+		}
+		
+	div.container > article > div > div.swiper-tabs > ul > li > span {
+		font : normal 28px/40px "Regular", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > article > div.accent {
+		padding : 50px 50px 0 50px;
+		}
+		
+	div.container > article > div.accent > div {
+		padding : 25px;
+		}
+	}
+	
+@media (min-width : 861px) and (max-width : 1040px) {
+	div.container > article > div > div.swiper-tabs {
+		max-width : calc(100vw - 80px);
+		}
+		
+	div.container > article > div > div.swiper-tabs > ul > li > span {
+		font : normal 26px/36px "Regular", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > article > div.accent {
+		padding : 40px 40px 0 40px;
+		}
+		
+	div.container > article > div.accent > div {
+		padding : 20px;
+		}
+	}
+	
+@media (min-width : 481px) and (max-width : 860px) {
+	div.container > article > div > div.swiper-tabs {
+		max-width : calc(100vw - 60px);
+		}
+		
+	div.container > article > div > div.swiper-tabs > ul > li > span {
+		font : normal 24px/32px "Regular", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > article > div.accent {
+		padding : 30px 30px 0 30px;
+		}
+		
+	div.container > article > div.accent > div {
+		padding : 15px;
+		}
+	}
+	
+@media (max-width : 480px) {
+	div.container > article > div > div.swiper-tabs {
+		max-width : calc(100vw - 40px);
+		}
+	
+	div.container > article > div > div.swiper-tabs > ul > li > span {
+		font : normal 22px/28px "Regular", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > article > div.accent {
+		padding : 20px 20px 0 20px;
+		}
+		
+	div.container > article > div.accent > div {
+		padding : 10px;
+		}
+	}

@@ -1,6 +1,17 @@
+var tabs = null;
+
 function resize() {
 	if ($('div.container').hasClass('opened')) {
 		$('div.container').removeClass('opened');
+		}
+	if (!tabs && $('div.container > article > div > div.swiper-tabs').length!==0) {
+		setTimeout(function() {
+			tabs = new Swiper('div.container > article > div > div.swiper-tabs', {
+        		slidesPerView: 'auto',
+        		mousewheel: true,
+        		freeMode: true
+    			});
+			}, 50);
 		}
 	}
 
@@ -146,6 +157,20 @@ $(document).ready(function() {
 		});
 	clear($('.field'));
 	$('input[type=tel]').inputmask('+7 (999) 999-99-99');
+	if ($('div.container > article > div > div.swiper-tabs > ul > li.selected').length !== 0) {
+		if ($('div.container > article > div > ul.service.' + $('div.container > article > div > div.swiper-tabs > ul > li.selected').data('class')).length !== 0 && !$('div.container > article > div > ul.service.' + $('div.container > article > div > div.swiper-tabs > ul > li.selected').data('class')).hasClass('selected')) {
+			$('div.container > article > div > ul.service').removeClass('selected');
+			$('div.container > article > div > ul.service.' + $('div.container > article > div > div.swiper-tabs > ul > li.selected').data('class')).addClass('selected');
+			}
+		}
+	$('div.container > article > div > div.swiper-tabs > ul > li').on('click', function() {
+		if (!$(this).hasClass('selected') && $('div.container > article > div > ul.service.' + $(this).data('class')).length !== 0) {
+			$('div.container > article > div > div.swiper-tabs > ul > li').removeClass('selected');
+			$('div.container > article > div > ul.service').removeClass('selected');
+			$(this).addClass('selected');
+			$('div.container > article > div > ul.service.' + $(this).data('class')).addClass('selected');
+			}
+		});
 	return false;
 	});
 	
