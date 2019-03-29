@@ -40,9 +40,13 @@ div.form > form > div {
 div.form,	
 div.form > form > div,
 div.form > form > div > div,
-div.form > form > div > div > ul > li,
-div.form > form > ul > li {
+div.form > form > div > div > ul > li {
 	position : relative;
+	}
+	
+div.form > form > div > div {
+	width : 100%;
+	min-width : 280px;
 	}
 	
 div.form > form > div > div > ul {
@@ -57,27 +61,10 @@ div.form.success > div {
 	width : 100%;
 	}
 
-div.form > form > ul {
-	display : block;
-	padding : 0 0 15px 0;
-	margin : 0;
-	list-style : none;
-	}
-	
-div.form > form > ul > li {
-	display : block;
-	min-height : 40px;
-	margin : 40px 0 0 0;
-	background-color : rgba(26, 26, 26, 1);
-	}
-
 div.form > form > div > div > textarea,
 div.form > form > div > div > ul > li > input[type=text],
 div.form > form > div > div > ul > li > input[type=email],
-div.form > form > div > div > ul > li > input[type=tel],
-div.form > form > ul > li > input[type=text],
-div.form > form > ul > li > input[type=email],
-div.form > form > ul > li > input[type=tel] {
+div.form > form > div > div > ul > li > input[type=tel] {
 	display : block;
 	position : relative;
 	z-index : 2;
@@ -89,10 +76,7 @@ div.form > form > ul > li > input[type=tel] {
 
 div.form > form > div > div > ul > li > input[type=text],
 div.form > form > div > div > ul > li > input[type=email],
-div.form > form > div > div > ul > li > input[type=tel],
-div.form > form > ul > li > input[type=text],
-div.form > form > ul > li > input[type=email],
-div.form > form > ul > li > input[type=tel] {
+div.form > form > div > div > ul > li > input[type=tel] {
 	min-height : 40px;
 	padding : 0 20px;	
 	font : normal 18px/40px "Bold", Arial, Tahoma, Verdana, sans-serif;
@@ -103,7 +87,7 @@ div.form > form > div > div > textarea {
 	min-height : 186px;
 	padding : 16px 20px;
 	font : normal 18px/24px "Regular", Arial, Tahoma, Verdana, sans-serif;
-	color : rgba(88, 88, 88, 1);
+	color : rgba(143, 143, 143, 1);
 	height : 100%;
 	resize : none;
 	}
@@ -111,8 +95,7 @@ div.form > form > div > div > textarea {
 div.form > form > div > div > ul > li > input[type=text] + span,
 div.form > form > div > div > ul > li > input[type=email] + span,
 div.form > form > div > div > ul > li > input[type=tel] + span,
-div.form > form > div > div > textarea + span,
-div.form > form > ul > li > span {
+div.form > form > div > div > textarea + span {
 	display : block;
 	position : absolute;
 	bottom : 100%;
@@ -123,8 +106,7 @@ div.form > form > ul > li > span {
 	}
 
 div.form > form > div > div > ul > li > input + span::before,
-div.form > form > div > div > textarea + span::before,
-div.form > form > ul > li > input + span::before {
+div.form > form > div > div > textarea + span::before {
 	display : block;
 	position : absolute;
 	top : calc(100% + 40px);
@@ -139,18 +121,14 @@ div.form > form > ul > li > input + span::before {
 	overflow : hidden;
 	}
 
-div.form > form > div > div > ul > li > input.error + span::before,
-div.form > form > ul > li > input.error + span::before {
+div.form > form > div > div > ul > li > input.error + span::before {
 	width : 100%;
 	}
 
 div.form > form > div > div > textarea + span > span,
 div.form > form > div > div > ul > li > input[type=text] + span > span,
 div.form > form > div > div > ul > li > input[type=email] + span > span,
-div.form > form > div > div > ul > li > input[type=tel] + span > span,
-div.form > form > ul > li > input[type=text] + span > span,
-div.form > form > ul > li > input[type=email] + span > span,
-div.form > form > ul > li > input[type=tel] + span > span { 
+div.form > form > div > div > ul > li > input[type=tel] + span > span { 
 	display : inline-block;
 	position : absolute;
 	top : 0;
@@ -168,18 +146,11 @@ div.form > form > div > div > ul > li > input[type=email]:focus + span > span,
 div.form > form > div > div > ul > li > input[type=tel]:focus + span > span,
 div.form > form > div > div > ul > li > input[type=text] + span.selected > span,
 div.form > form > div > div > ul > li > input[type=email] + span.selected > span,
-div.form > form > div > div > ul > li > input[type=tel] + span.selected > span,
-div.form > form > ul > li > input[type=text]:focus + span > span,
-div.form > form > ul > li > input[type=email]:focus + span > span,
-div.form > form > ul > li > input[type=tel]:focus + span > span,
-div.form > form > ul > li > input[type=text] + span.selected > span,
-div.form > form > ul > li > input[type=email] + span.selected > span,
-div.form > form > ul > li > input[type=tel] + span.selected > span { 
+div.form > form > div > div > ul > li > input[type=tel] + span.selected > span { 
 	color : rgba(255, 255, 255, 1);
 	}
 
-div.form > form > div > div > ul > li.required > span > span::after,
-div.form > form > ul > li.required > span > span::after {
+div.form > form > div > div > ul > li.required > span > span::after {
 	position : absolute;
 	top : 4px;
 	left : calc(100% + 5px);
@@ -191,8 +162,7 @@ div.form > form > ul > li.required > span > span::after {
 	content : "\273b";
 	}
 	
-div.form > form > div > div > button,
-div.form > form > button {
+div.form > form > div > div > button {
 	display : block;
 	position : relative;
 	width : 100%;
@@ -209,34 +179,31 @@ div.form > form > button {
 	transition : all 0.25s ease;
 	}
 
-div.form > form > div > div > button.active,	
-div.form > form > button.active {
+div.form > form > div > div > button.active {
 	background-color : rgba(213, 38, 38, 1);
 	cursor : pointer;
 	}
 	
-div.form > form > div > div > button {
+div.form.consultation > form > div > div > button {
 	max-width : 200px;
 	}
 	
-div.form > span,
 div.form > div > span,
+div.form > form > span,
 div.form > form > h4 {
 	display : block;
 	color : rgba(255, 255, 255, 1);
 	}
 	
-div.form > span,
-div.form > div > span,
-div.form > p,
+div.form > form > span,
 div.form > div > p,
+div.form > div > span,
 div.form > form > p,
 div.form > form > h4 {
 	text-align : center;
 	}
 
-div.form > p,
-div.form > div > span,
+
 div.form > div > p,
 div.form > form > p,	
 div.form > form > h4 {
@@ -255,7 +222,6 @@ div.form > form > h4::before {
 	background-color : rgba(213, 38, 38, 1);
 	}
 
-div.form > p,	
 div.form > div > p,
 div.form > form > p {
 	max-width : 640px;
@@ -287,10 +253,10 @@ div.form > form > div > div:last-child {
 		padding : 0 60px;
 		}
 		
-	div.form > span,
 	div.form > div > span,
+	div.form > form > span,
 	div.form > form > h4 {
-		font : normal 40px/40px "Bold", Arial, Tahoma, Verdana, sans-serif;
+		font : normal 36px/36px "Bold", Arial, Tahoma, Verdana, sans-serif;
 		}
 	}
 	
@@ -299,8 +265,8 @@ div.form > form > div > div:last-child {
 		padding : 0 50px;
 		}
 		
-	div.form > span,
 	div.form > div > span,
+	div.form > form > span,
 	div.form > form > h4 {
 		font : normal 36px/36px "Bold", Arial, Tahoma, Verdana, sans-serif;
 		}	
@@ -311,10 +277,10 @@ div.form > form > div > div:last-child {
 		padding : 0 40px;
 		}
 		
-	div.form > span,
 	div.form > div > span,
+	div.form > form > span,
 	div.form > form > h4 {
-		font : normal 32px/32px "Bold", Arial, Tahoma, Verdana, sans-serif;
+		font : normal 30px/30px "Bold", Arial, Tahoma, Verdana, sans-serif;
 		}	
 	}
 	
@@ -323,10 +289,10 @@ div.form > form > div > div:last-child {
 		padding : 0 30px;
 		}
 		
-	div.form > span,
 	div.form > div > span,
+	div.form > form > span,
 	div.form > form > h4 {
-		font : normal 28px/28px "Bold", Arial, Tahoma, Verdana, sans-serif;
+		font : normal 24px/24px "Bold", Arial, Tahoma, Verdana, sans-serif;
 		}
 	}
 	
@@ -335,25 +301,19 @@ div.form > form > div > div:last-child {
 		padding : 0 20px;
 		}
 		
-	div.form > span,
 	div.form > div > span,
+	div.form > form > span,
 	div.form > form > h4 {
 		font : normal 24px/24px "Bold", Arial, Tahoma, Verdana, sans-serif;
 		}
 	}
 	
 @media (min-width : 861px) {
-	div.form > form > div > div {
+	div.form.consultation > form > div > div {
 		width : 48%;
 		}
 		
-	div.form > form > div > div:last-child {
+	div.form.consultation > form > div > div:last-child {
 		margin-left : 52%;
 		}
-	}
-	
-@media (max-width : 860px) {
-	div.form > form > div > div {
-		width : 100%;
-		}	
 	}

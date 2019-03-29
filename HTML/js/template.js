@@ -150,13 +150,7 @@ $(document).ready(function() {
 	$('div.form > form button').on('click', function() {
 		if ($(this).hasClass('active')) {
 			/* $(this).parents('form').submit(); - убрать комментирование в боевом режиме, кусок ниже удалить */
-			if ($(this).data('form') == 'cb') {
-				$('div.form.'+ $(this).data('form')).html('<span>Спасибо!</span><p>В ближайшее время с Вами свяжется наш специалист и ответит на все, интересующие Вас, вопросы.</p>');
-				}
-			if ($(this).data('form') == 'consultation' && !$('div.form.'+ $(this).data('form')).hasClass('success')) {
-				$('div.form.'+ $(this).data('form')).addClass('success');
-				}
-				
+			$('div.form.'+ $(this).data('form')).addClass('success');
 			}
 		});
 	clear($('.field'));
