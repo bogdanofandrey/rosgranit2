@@ -1,5 +1,62 @@
 @charset "UTF-8";
 
+section.form,
+div.form {
+	margin : 0 auto;
+	}
+
+section.form {
+	max-width : 1280px;
+	}
+	
+div.form {
+	max-width : 960px;
+	}
+	
+section.form > div.form,
+div.form > form > div {	
+	display : flex;
+	display : -webkit-box;
+	display : -webkit-flex;
+	display : -ms-flexbox;
+	flex-wrap : wrap;
+	-webkit-flex-wrap : wrap;
+	-ms-flex-wrap : wrap;
+	}
+	
+section.form > div.form {
+	align-items : flex-end;
+	-webkit-align-items : flex-end;
+	-ms-align-items : flex-end;
+	}
+	
+div.form > form > div {
+	justify-content : space-between;
+	-webkit-justify-content : space-between;
+	-ms-justify-content : space-between;
+	margin : 0 auto;
+	}
+
+div.form,	
+div.form > form > div,
+div.form > form > div > div,
+div.form > form > div > div > ul > li,
+div.form > form > ul > li {
+	position : relative;
+	}
+	
+div.form > form > div > div > ul {
+	padding : 0;
+	margin : 0;
+	list-style : none;
+	}
+	
+div.form,
+div.form > form,
+div.form.success > div {
+	width : 100%;
+	}
+
 div.form > form > ul {
 	display : block;
 	padding : 0 0 15px 0;
@@ -9,28 +66,52 @@ div.form > form > ul {
 	
 div.form > form > ul > li {
 	display : block;
-	position : relative;
 	min-height : 40px;
 	margin : 40px 0 0 0;
 	background-color : rgba(26, 26, 26, 1);
 	}
 
+div.form > form > div > div > textarea,
+div.form > form > div > div > ul > li > input[type=text],
+div.form > form > div > div > ul > li > input[type=email],
+div.form > form > div > div > ul > li > input[type=tel],
 div.form > form > ul > li > input[type=text],
 div.form > form > ul > li > input[type=email],
 div.form > form > ul > li > input[type=tel] {
+	display : block;
 	position : relative;
 	z-index : 2;
-	display : block;
 	width : 100%;
-	min-height : 40px;
-	padding : 0 20px;
 	border : 1px solid rgba(88, 88, 88, 1);
 	border-radius : 0;
+	background-color : rgba(26, 26, 26, 1);
+	}
+
+div.form > form > div > div > ul > li > input[type=text],
+div.form > form > div > div > ul > li > input[type=email],
+div.form > form > div > div > ul > li > input[type=tel],
+div.form > form > ul > li > input[type=text],
+div.form > form > ul > li > input[type=email],
+div.form > form > ul > li > input[type=tel] {
+	min-height : 40px;
+	padding : 0 20px;	
 	font : normal 18px/40px "Bold", Arial, Tahoma, Verdana, sans-serif;
-	background-color : rgba(26, 26, 26, 0);
 	color : rgba(255, 255, 255, 1);
 	}
 	
+div.form > form > div > div > textarea {
+	min-height : 186px;
+	padding : 16px 20px;
+	font : normal 18px/24px "Regular", Arial, Tahoma, Verdana, sans-serif;
+	color : rgba(88, 88, 88, 1);
+	height : 100%;
+	resize : none;
+	}
+	
+div.form > form > div > div > ul > li > input[type=text] + span,
+div.form > form > div > div > ul > li > input[type=email] + span,
+div.form > form > div > div > ul > li > input[type=tel] + span,
+div.form > form > div > div > textarea + span,
 div.form > form > ul > li > span {
 	display : block;
 	position : absolute;
@@ -40,7 +121,9 @@ div.form > form > ul > li > span {
 	width : 100%;
 	height : 30px;
 	}
-	
+
+div.form > form > div > div > ul > li > input + span::before,
+div.form > form > div > div > textarea + span::before,
 div.form > form > ul > li > input + span::before {
 	display : block;
 	position : absolute;
@@ -55,11 +138,16 @@ div.form > form > ul > li > input + span::before {
 	transition : all 0.25s ease;
 	overflow : hidden;
 	}
-	
+
+div.form > form > div > div > ul > li > input.error + span::before,
 div.form > form > ul > li > input.error + span::before {
 	width : 100%;
 	}
-	
+
+div.form > form > div > div > textarea + span > span,
+div.form > form > div > div > ul > li > input[type=text] + span > span,
+div.form > form > div > div > ul > li > input[type=email] + span > span,
+div.form > form > div > div > ul > li > input[type=tel] + span > span,
 div.form > form > ul > li > input[type=text] + span > span,
 div.form > form > ul > li > input[type=email] + span > span,
 div.form > form > ul > li > input[type=tel] + span > span { 
@@ -72,7 +160,15 @@ div.form > form > ul > li > input[type=tel] + span > span {
 	white-space : nowrap;
 	transition : all 0.25s ease;
 	}
-	
+
+div.form > form > div > div > textarea + span.selected > span,
+div.form > form > div > div > textarea:focus + span > span,
+div.form > form > div > div > ul > li > input[type=text]:focus + span > span,
+div.form > form > div > div > ul > li > input[type=email]:focus + span > span,
+div.form > form > div > div > ul > li > input[type=tel]:focus + span > span,
+div.form > form > div > div > ul > li > input[type=text] + span.selected > span,
+div.form > form > div > div > ul > li > input[type=email] + span.selected > span,
+div.form > form > div > div > ul > li > input[type=tel] + span.selected > span,
 div.form > form > ul > li > input[type=text]:focus + span > span,
 div.form > form > ul > li > input[type=email]:focus + span > span,
 div.form > form > ul > li > input[type=tel]:focus + span > span,
@@ -81,7 +177,8 @@ div.form > form > ul > li > input[type=email] + span.selected > span,
 div.form > form > ul > li > input[type=tel] + span.selected > span { 
 	color : rgba(255, 255, 255, 1);
 	}
-	
+
+div.form > form > div > div > ul > li.required > span > span::after,
 div.form > form > ul > li.required > span > span::after {
 	position : absolute;
 	top : 4px;
@@ -94,6 +191,7 @@ div.form > form > ul > li.required > span > span::after {
 	content : "\273b";
 	}
 	
+div.form > form > div > div > button,
 div.form > form > button {
 	display : block;
 	position : relative;
@@ -110,8 +208,151 @@ div.form > form > button {
 	cursor : default;
 	transition : all 0.25s ease;
 	}
-	
+
+div.form > form > div > div > button.active,	
 div.form > form > button.active {
 	background-color : rgba(213, 38, 38, 1);
 	cursor : pointer;
+	}
+	
+div.form > form > div > div > button {
+	max-width : 200px;
+	}
+	
+div.form > span,
+div.form > div > span,
+div.form > form > h4 {
+	display : block;
+	color : rgba(255, 255, 255, 1);
+	}
+	
+div.form > span,
+div.form > div > span,
+div.form > p,
+div.form > div > p,
+div.form > form > p,
+div.form > form > h4 {
+	text-align : center;
+	}
+
+div.form > p,
+div.form > div > span,
+div.form > div > p,
+div.form > form > p,	
+div.form > form > h4 {
+	position : relative;
+	padding : 20px 0;
+	}
+	
+div.form > form > h4::before {
+	position : absolute;
+	top : 100%;
+	left : calc(50% - 20px);
+	z-index : 10;
+	width : 40px;
+	height : 5px;
+	content : "";
+	background-color : rgba(213, 38, 38, 1);
+	}
+
+div.form > p,	
+div.form > div > p,
+div.form > form > p {
+	max-width : 640px;
+	margin : 0 auto;
+	font : normal 18px/24px "Regular", Arial, Tahoma, Verdana, sans-serif;
+	}
+	
+div.form.success > form,
+div.form > div {
+	display : none;
+	}
+	
+div.form.success > div {
+	display : block;
+	}
+	
+div.form > form > div > div:not(:last-child),
+div.form > form > div > div > ul > li:not(:first-child) {
+	margin-top : 40px;
+	}
+	
+div.form > form > div > div:last-child {
+	margin-top : 20px;
+	}
+	
+@media (min-width : 1401px) {
+	section.form {
+		padding : 0 60px;
+		}
+		
+	div.form > span,
+	div.form > div > span,
+	div.form > form > h4 {
+		font : normal 40px/40px "Bold", Arial, Tahoma, Verdana, sans-serif;
+		}
+	}
+	
+@media (min-width : 1041px) and (max-width : 1400px) {
+	section.form {
+		padding : 0 50px;
+		}
+		
+	div.form > span,
+	div.form > div > span,
+	div.form > form > h4 {
+		font : normal 36px/36px "Bold", Arial, Tahoma, Verdana, sans-serif;
+		}	
+	}
+	
+@media (min-width : 861px) and (max-width : 1040px) {
+	section.form {
+		padding : 0 40px;
+		}
+		
+	div.form > span,
+	div.form > div > span,
+	div.form > form > h4 {
+		font : normal 32px/32px "Bold", Arial, Tahoma, Verdana, sans-serif;
+		}	
+	}
+	
+@media (min-width : 481px) and (max-width : 860px) {
+	section.form {
+		padding : 0 30px;
+		}
+		
+	div.form > span,
+	div.form > div > span,
+	div.form > form > h4 {
+		font : normal 28px/28px "Bold", Arial, Tahoma, Verdana, sans-serif;
+		}
+	}
+	
+@media (max-width : 480px) {
+	section.form {
+		padding : 0 20px;
+		}
+		
+	div.form > span,
+	div.form > div > span,
+	div.form > form > h4 {
+		font : normal 24px/24px "Bold", Arial, Tahoma, Verdana, sans-serif;
+		}
+	}
+	
+@media (min-width : 861px) {
+	div.form > form > div > div {
+		width : 48%;
+		}
+		
+	div.form > form > div > div:last-child {
+		margin-left : 52%;
+		}
+	}
+	
+@media (max-width : 860px) {
+	div.form > form > div > div {
+		width : 100%;
+		}	
 	}

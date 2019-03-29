@@ -15,17 +15,6 @@ div.callback.opened {
   	flex-direction : column;
 	}
 
-/* div.callback.opened + span {
-	display : block;
-	position : absolute;
-	top : 0;
-	left : 0;
-	z-index : 100;
-	width : 100%;
-	height: 100%;
-	background-color : rgba(26, 26, 26, 0.9);
-	} */
-
 div.callback.opened + div.container {
   	-webkit-filter : url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8ZmlsdGVyIGlkPSJibHVyIj4KICAgICAgICA8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIxMiIgLz4KICAgIDwvZmlsdGVyPgo8L3N2Zz4=#blur");
  	-webkit-filter : blur(3px);
@@ -97,18 +86,6 @@ div.callback > button::after {
 	
 div.callback > div.form {
 	max-width : 340px;
-	font : normal 16px/24px "Regular", Arial, Tahoma, Verdana, sans-serif;
-	}
-	
-div.callback > div.form > span {
-	display : block;
-	white-space : nowrap;
-	color : rgba(255, 255, 255, 1);
-	}
-	
-div.callback > div.form > span,
-div.callback > div.form > p {
-	text-align : center;
 	}
 	
 div.callback > div.form > form > button {
@@ -122,10 +99,6 @@ div.callback > div.form > form > button {
 		width : calc(100% - 120px);
 		min-height : calc(100% - 120px);
 		}
-
-	div.callback > div.form > span {
-		font : normal 36px/36px "Bold", Arial, Tahoma, Verdana, sans-serif;
-		}
 	}
 	
 @media (min-width : 1041px) and (max-width : 1400px) {
@@ -135,35 +108,23 @@ div.callback > div.form > form > button {
 		width : calc(100% - 100px);
 		min-height : calc(100% - 100px);
 		}
-		
-	div.callback > div.form > span {
-		font : normal 36px/36px "Bold", Arial, Tahoma, Verdana, sans-serif;
-		}
 	}
 	
-@media (min-width : 721px) and (max-width : 1040px) {
+@media (min-width : 861px) and (max-width : 1040px) {
 	div.callback {
 		top : 40px;
 		left : 40px;
 		width : calc(100% - 80px);
 		min-height : calc(100% - 80px);
 		}
-		
-	div.callback > div.form > span {
-		font : normal 24px/24px "Bold", Arial, Tahoma, Verdana, sans-serif;
-		}
 	}
 	
-@media (min-width : 481px) and (max-width : 720px) {
+@media (min-width : 481px) and (max-width : 860px) {
 	div.callback {
 		top : 30px;
 		left : 30px;
 		width : calc(100% - 60px);
 		min-height : calc(100% - 60px);
-		}
-		
-	div.callback > div.form > span {
-		font : normal 24px/24px "Bold", Arial, Tahoma, Verdana, sans-serif;
 		}
 	}
 	
@@ -173,9 +134,5 @@ div.callback > div.form > form > button {
 		left : 20px;
 		width : calc(100% - 40px);
 		min-height : calc(100% - 40px);
-		}
-		
-	div.callback > div.form > span {
-		font : normal 24px/24px "Bold", Arial, Tahoma, Verdana, sans-serif;
 		}
 	}

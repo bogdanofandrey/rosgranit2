@@ -50,19 +50,19 @@ function isPhone(phone) {
 	
 function isRequire(classname) {
 	if ($('div.form.' + classname + ' input.error').length !== 0) {
-		if ($('div.form.' + classname + ' > form > button').hasClass('active')) {
-			$('div.form.' + classname + ' > form > button').removeClass('active');
+		if ($('div.form.' + classname + ' > form button').hasClass('active')) {
+			$('div.form.' + classname + ' > form button').removeClass('active');
 			}
 		}
 	else {
 		if ($('div.form.' + classname + ' .required > input').length !== $('div.form.' + classname + ' .required > input.success').length) {
-			if ($('div.form.' + classname + ' > form > button').hasClass('active')) {
-				$('div.form.' + classname + ' > form > button').removeClass('active');
+			if ($('div.form.' + classname + ' > form button').hasClass('active')) {
+				$('div.form.' + classname + ' > form button').removeClass('active');
 				}
 			}
 		else {
-			if (!$('div.form.' + classname + ' > form > button').hasClass('active')) {
-				$('div.form.' + classname + ' > form > button').addClass('active');
+			if (!$('div.form.' + classname + ' > form button').hasClass('active')) {
+				$('div.form.' + classname + ' > form button').addClass('active');
 				}
 			}
 		}
@@ -147,12 +147,16 @@ $(document).ready(function() {
 			isRequire($(element).data('form'));
 			}, 100);
 		});
-	$('div.form > form > button').on('click', function() {
+	$('div.form > form button').on('click', function() {
 		if ($(this).hasClass('active')) {
 			/* $(this).parents('form').submit(); - убрать комментирование в боевом режиме, кусок ниже удалить */
 			if ($(this).data('form') == 'cb') {
 				$('div.form.'+ $(this).data('form')).html('<span>Спасибо!</span><p>В ближайшее время с Вами свяжется наш специалист и ответит на все, интересующие Вас, вопросы.</p>');
 				}
+			if ($(this).data('form') == 'consultation' && !$('div.form.'+ $(this).data('form')).hasClass('success')) {
+				$('div.form.'+ $(this).data('form')).addClass('success');
+				}
+				
 			}
 		});
 	clear($('.field'));
