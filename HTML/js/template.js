@@ -50,19 +50,19 @@ function isPhone(phone) {
 	
 function isRequire(classname) {
 	if ($('div.form.' + classname + ' input.error').length !== 0) {
-		if ($('div.form.' + classname + ' > form button').hasClass('active')) {
-			$('div.form.' + classname + ' > form button').removeClass('active');
+		if ($('div.form.' + classname + ' > form > div > div > button').hasClass('active')) {
+			$('div.form.' + classname + ' > form > div > div > button').removeClass('active');
 			}
 		}
 	else {
 		if ($('div.form.' + classname + ' .required > input').length !== $('div.form.' + classname + ' .required > input.success').length) {
-			if ($('div.form.' + classname + ' > form button').hasClass('active')) {
-				$('div.form.' + classname + ' > form button').removeClass('active');
+			if ($('div.form.' + classname + ' > form > div > div > button').hasClass('active')) {
+				$('div.form.' + classname + ' > form > div > div > button').removeClass('active');
 				}
 			}
 		else {
-			if (!$('div.form.' + classname + ' > form button').hasClass('active')) {
-				$('div.form.' + classname + ' > form button').addClass('active');
+			if (!$('div.form.' + classname + ' > form > div > div > button').hasClass('active')) {
+				$('div.form.' + classname + ' > form > div > div > button').addClass('active');
 				}
 			}
 		}
@@ -129,7 +129,10 @@ $(document).ready(function() {
 				else {
 					if ($(element).attr('name') == 'uname') {
 						var result = isName($(element).val());
-						}				
+						}
+					if ($(element).attr('name') == 'uemail') {
+						var result = isEmail($(element).val());
+						}			
 					if (!result) {
 						if ($(element).hasClass('selected')) {
 							$(element).removeClass('selected');
@@ -147,7 +150,7 @@ $(document).ready(function() {
 			isRequire($(element).data('form'));
 			}, 100);
 		});
-	$('div.form > form button').on('click', function() {
+	$('div.form > form > div > div > button').on('click', function() {
 		if ($(this).hasClass('active')) {
 			/* $(this).parents('form').submit(); - убрать комментирование в боевом режиме, кусок ниже удалить */
 			$('div.form.'+ $(this).data('form')).addClass('success');
