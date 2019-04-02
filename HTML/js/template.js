@@ -1,4 +1,24 @@
-var tabs = null;
+var tabs = null,
+	main = null;
+
+function main() {    
+	main = new Swiper('div.container > div.swiper-main', {
+    	loop: true,
+    	slidesPerView: 1,
+        keyboard: {
+    		enabled: true,
+    		onlyInViewport: false
+  			},
+  		speed: 450,
+  		preloadImages: true,
+  		pagination: {
+        	el: 'div.container > div.swiper-main > div',
+        	clickable: true
+      		},
+    	observer: true
+    	});
+    return false;
+    }
 
 function resize() {
 	if ($('div.container').hasClass('opened')) {
@@ -11,6 +31,24 @@ function resize() {
         		mousewheel: true,
         		freeMode: true
     			});
+			}, 50);
+		}
+	if (!main && $('div.container > div.swiper-main').length!==0) {
+		setTimeout(function() {
+			main = new Swiper('div.container > div.swiper-main', {
+				loop: true,
+				slidesPerView: 1,
+				keyboard: {
+    				enabled: true,
+    				onlyInViewport: false
+  					},
+  				speed: 450,
+  				preloadImages: true,
+  				pagination: {
+        			el: 'div.container > div.swiper-main > div',
+        			clickable: true
+      				}
+				});
 			}, 50);
 		}
 	}
@@ -113,6 +151,9 @@ $(document).ready(function() {
 					if ($(element).attr('name') == 'uphone') {
 						var result = isPhone($(element).val());
 						}
+					if ($(element).attr('name') == 'uemail') {
+						var result = isEmail($(element).val());
+						}
 					if (!result) {
 						if ($(element).hasClass('success')) {
 							$(element).removeClass('success');
@@ -149,6 +190,19 @@ $(document).ready(function() {
 				}
 			isRequire($(element).data('form'));
 			}, 100);
+		});
+	$('span.checkbox').on('click', function() {
+		if (!$(this).hasClass('checked')) {
+			$(this).addClass('checked');
+			$(this).prev('input').prop('checked', true);
+			$(this).prev('input').addClass('success');
+			}
+		else {
+			$(this).removeClass('checked');
+			$(this).prev('input').prop('checked', false);
+			$(this).prev('input').removeClass('success');
+			}
+		isRequire($(this).data('form'));
 		});
 	$('div.form > form > div > div > button').on('click', function() {
 		if ($(this).hasClass('active')) {
