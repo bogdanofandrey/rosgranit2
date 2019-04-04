@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+/* слайды -- начало */
+
 div.container > div.swiper-main {
 	position : relative;
 	width : 100%;
@@ -187,6 +189,172 @@ div.container > div.swiper-main > ul > li > div > div > ul > li::before {
 	content : "";
 	background-color : rgba(213, 38, 38, 1);
 	}
+	
+/* слайды -- конец */
+
+/* преимущества -- начало */
+
+div.container > div.advantages {
+	width : 100%;
+	margin : 0 auto;
+	}
+
+div.container > section.steps > div > ol,
+div.container > div.advantages > ul {
+	display : flex;
+	display : -webkit-box;
+	display : -webkit-flex;
+	display : -ms-flexbox;
+	width : 100%;
+	margin : 0;
+	list-style : none;
+	}
+	
+div.container > div.advantages > ul > li {
+	background-position : 0 0;
+	background-repeat : no-repeat;
+	font : normal 18px/24px "Regular", Arial, Tahoma, Verdana, sans-serif;
+	color : rgba(167, 167, 167, 1);
+	}
+	
+div.container > div.advantages > ul > li:first-child {
+	background-image : url("../img/icon-utp-01.svg");
+	background-size : 64px 52px;	
+	}
+	
+div.container > div.advantages > ul > li:last-child {
+	background-image : url("../img/icon-utp-03.svg");
+	background-size : 81px 55px;
+	}
+	
+div.container > div.advantages > ul > li:nth-child(2) {
+	background-image : url("../img/icon-utp-02.svg");
+	background-size : 64px 56px;
+	}
+	
+div.container > div.advantages > ul > li::before {
+	display : block;
+	white-space : nowrap;
+	color : rgba(213, 38, 38, 1);
+	}
+	
+div.container > div.advantages > ul > li:first-child::before {
+	content : "20";
+	}
+	
+div.container > div.advantages > ul > li:last-child::before {
+	content : "15 000 м²";
+	}
+	
+div.container > div.advantages > ul > li:nth-child(2)::before {
+	content : "10";
+	}
+
+/* преимущества -- конец */
+
+/* этапы -- начало */
+div.container > section.steps {
+	position : relative;
+	background-image : url("../img/steps.jpg");
+	background-position : 50% 50%;
+	background-repeat : no-repeat;
+	background-size : cover;
+	}
+	
+div.container > section.steps::before {
+	position : absolute;
+	top : 0;
+	left : 0;
+	z-index : 1;
+	width : 100%;
+	height : 100%;
+	background-color : rgba(0, 0, 0, 0.7);
+	content : "";
+	}
+	
+div.container > section.steps > div {
+	position : relative;
+	z-index : 2;
+	max-width : 1280px;
+	margin : 0 auto;
+	text-align : center;
+	color : rgba(255, 255, 255, 1);
+	}
+	
+div.container > section.steps > div > ol > li {
+	padding-top : 80px;
+	background-position : 0 0;
+	background-repeat : no-repeat;
+	font : normal 18px/24px "Regular", Arial, Tahoma, Verdana, sans-serif;
+	text-align : left;
+	}
+	
+div.container > section.steps > div > ol > li:first-child {
+	background-image : url("../img/icon-step-01.svg");
+	background-size : 64px 56px;
+	}
+	
+div.container > section.steps > div > ol > li:nth-child(2) {
+	background-image : url("../img/icon-step-02.svg");
+	background-size : 63px 63px;
+	}
+	
+div.container > section.steps > div > ol > li:nth-child(3) {
+	background-image : url("../img/icon-step-03.svg");
+	background-size : 81px 59px;
+	}
+	
+div.container > section.steps > div > ol > li:nth-child(4) {
+	background-image : url("../img/icon-step-04.svg");
+	background-size : 64px 52px;
+	}
+	
+div.container > section.steps > div > ol > li:nth-child(5) {
+	background-image : url("../img/icon-step-05.svg");
+	background-size : 101px 62px;
+	}
+	
+div.container > section.steps > div > ol > li:last-child {
+	background-image : url("../img/icon-step-06.svg");
+	background-size : 64px 58px;
+	}
+
+div.container > section.steps > div > p,	
+div.container > section.steps > div > h4 {
+	position : relative;
+	padding : 20px 0;
+	}
+	
+div.container > section.steps > div > h4::before {
+	position : absolute;
+	top : 100%;
+	left : calc(50% - 20px);
+	z-index : 10;
+	width : 40px;
+	height : 5px;
+	content : "";
+	background-color : rgba(213, 38, 38, 1);
+	}
+	
+div.container > section.steps > div > p {
+	max-width : 440px;
+	margin : 0 auto;
+	font : normal 18px/24px "Regular", Arial, Tahoma, Verdana, sans-serif;
+	}
+/* этапы -- конец */
+
+div.container > article > div.brief::before {
+	position : absolute;
+	top : 0;
+	z-index : 10;
+	height : 1px;
+	background-color : rgba(78, 78, 78, 1);
+	content : "";
+	}
+	
+div.container > article h1::before {
+	display : none !important;
+	}
 
 @media (min-width : 1401px) {
 	div.container > div.swiper-main > ul > li {
@@ -205,6 +373,62 @@ div.container > div.swiper-main > ul > li > div > div > ul > li::before {
 	div.container > div.swiper-main > ul > li > div > div > ul > li {
 		margin : 10px 0;
 		font : normal 24px/20px "Regular", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > div.advantages {
+		max-width : 1280px;
+		padding : 0 60px;		
+		}
+	
+	div.container > section.steps > div > ol,
+	div.container > div.advantages > ul {
+		padding : 60px 0 30px 0;
+		justify-content : space-between;
+		-webkit-justify-content : space-between;
+		-ms-justify-content : space-between;
+		}
+		
+	div.container > div.advantages > ul > li {
+		width : 30%;
+		}
+		
+	div.container > div.advantages > ul > li::before {
+		font : normal 40px/55px "Black", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > div.advantages > ul > li:first-child,
+	div.container > div.advantages > ul > li:nth-child(2) {
+		padding-left : 84px;	
+		}
+		
+	div.container > div.advantages > ul > li:last-child {
+		padding-left : 101px;	
+		}
+		
+	div.container > article > div.brief::before {
+		width : calc(100% - 120px);
+		left : 60px;
+		}
+		
+	div.container > article h1 {
+		max-width : 680px;
+		}
+		
+	div.container > section.steps {
+		padding : 60px 0;
+		}
+		
+	div.container > section.steps > div {
+		padding : 0 60px;
+		}
+		
+	div.container > section.steps > div > ol > li {
+		width : calc(100%/6 - 30px);
+		padding-bottom : 30px;
+		}
+		
+	div.container > section.steps > div > h4 {
+		font : normal 36px/36px "Bold", Arial, Tahoma, Verdana, sans-serif;
 		}
 	}
 	
@@ -226,6 +450,62 @@ div.container > div.swiper-main > ul > li > div > div > ul > li::before {
 		margin : 8px 0;
 		font : normal 22px/20px "Regular", Arial, Tahoma, Verdana, sans-serif;
 		}
+		
+	div.container > div.advantages {
+		max-width : 1280px;
+		padding : 0 50px;
+		}
+	
+	div.container > section.steps > div > ol,
+	div.container > div.advantages > ul {
+		padding : 50px 0 25px 0;
+		justify-content : space-between;
+		-webkit-justify-content : space-between;
+		-ms-justify-content : space-between;
+		}
+		
+	div.container > div.advantages > ul > li {
+		width : 30%;
+		}
+		
+	div.container > div.advantages > ul > li::before {
+		font : normal 3vw/55px "Black", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > div.advantages > ul > li:first-child,
+	div.container > div.advantages > ul > li:nth-child(2) {
+		padding-left : 84px;	
+		}
+		
+	div.container > div.advantages > ul > li:last-child {
+		padding-left : 101px;	
+		}
+		
+	div.container > article > div.brief::before {
+		width : calc(100% - 100px);
+		left : 50px;
+		}
+		
+	div.container > article h1 {
+		max-width : 660px;
+		}
+		
+	div.container > section.steps {
+		padding : 50px 0;
+		}
+		
+	div.container > section.steps > div {
+		padding : 0 50px;
+		}
+		
+	div.container > section.steps > div > ol > li {
+		width : calc(100%/6 - 25px);
+		padding-bottom : 25px;
+		}
+		
+	div.container > section.steps > div > h4 {
+		font : normal 36px/36px "Bold", Arial, Tahoma, Verdana, sans-serif;
+		}
 	}
 	
 @media (min-width : 861px) and (max-width : 1040px) {
@@ -245,6 +525,68 @@ div.container > div.swiper-main > ul > li > div > div > ul > li::before {
 	div.container > div.swiper-main > ul > li > div > div > ul > li {
 		margin : 6px 0;
 		font : normal 20px/20px "Regular", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > div.advantages {
+		padding : 0 40px;
+		}
+	
+	div.container > section.steps > div > ol,	
+	div.container > div.advantages > ul {
+		padding : 40px 0 20px 0;
+		justify-content : space-between;
+		-webkit-justify-content : space-between;
+		-ms-justify-content : space-between;
+		}
+		
+	div.container > div.advantages > ul > li {
+		width : 30%;
+		}
+	
+	div.container > div.advantages > ul > li::before {
+		padding-bottom : 20px;
+		font : normal 3vw/55px "Black", Arial, Tahoma, Verdana, sans-serif;
+		}
+	
+	div.container > div.advantages > ul > li:first-child::before,
+	div.container > div.advantages > ul > li:nth-child(2)::before {
+		padding-left : 84px;	
+		}
+		
+	div.container > div.advantages > ul > li:last-child::before {
+		padding-left : 101px;	
+		}
+		
+	div.container > article > div.brief::before {
+		width : calc(100% - 80px);
+		left : 40px;
+		}
+		
+	div.container > article h1 {
+		max-width : 620px;
+		}
+		
+	div.container > section.steps {
+		padding : 40px 0;
+		}
+		
+	div.container > section.steps > div {
+		padding : 0 40px;
+		}
+		
+	div.container > section.steps > div > ol {
+		flex-wrap : wrap;
+		-webkit-flex-wrap : wrap;
+		-ms-flex-wrap : wrap;		
+		}
+		
+	div.container > section.steps > div > ol > li {
+		padding-bottom : 40px;
+		width : calc(100%/3 - 20px);
+		}
+		
+	div.container > section.steps > div > h4 {
+		font : normal 30px/30px "Bold", Arial, Tahoma, Verdana, sans-serif;
 		}
 	}
 	
@@ -266,6 +608,63 @@ div.container > div.swiper-main > ul > li > div > div > ul > li::before {
 		margin : 4px 0;
 		font : normal 18px/20px "Regular", Arial, Tahoma, Verdana, sans-serif;
 		}
+		
+	div.container > div.advantages {
+		padding : 0 30px;
+		}
+	
+	div.container > section.steps > div > ol,
+	div.container > div.advantages > ul {
+		padding : 30px 0 15px 0;
+		flex-wrap : wrap;
+		-webkit-flex-wrap : wrap;
+		-ms-flex-wrap : wrap;
+		}
+		
+	div.container > div.advantages > ul > li {
+		width : 100%;
+		padding-left : 101px;
+		}
+		
+	div.container > div.advantages > ul > li:not(:last-child) {
+		padding-bottom : 15px;
+		}
+		
+	div.container > div.advantages > ul > li::before {
+		font : normal 40px/55px "Black", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > article > div.brief::before {
+		width : calc(100% - 60px);
+		left : 30px;
+		}
+		
+	div.container > article h1 {
+		max-width : 580px;
+		}
+		
+	div.container > section.steps {
+		padding : 30px 0;
+		}
+		
+	div.container > section.steps > div {
+		padding : 0 30px;
+		}
+		
+	div.container > section.steps > div > ol {
+		justify-content : space-between;
+		-webkit-justify-content : space-between;
+		-ms-justify-content : space-between;		
+		}
+		
+	div.container > section.steps > div > ol > li {
+		padding-bottom : 30px;
+		width : calc(100%/2 - 15px);
+		}
+		
+	div.container > section.steps > div > h4 {
+		font : normal 24px/24px "Bold", Arial, Tahoma, Verdana, sans-serif;
+		}
 	}
 	
 @media (max-width : 480px) {
@@ -285,5 +684,52 @@ div.container > div.swiper-main > ul > li > div > div > ul > li::before {
 	div.container > div.swiper-main > ul > li > div > div > ul > li {
 		margin : 2px 0;
 		font : normal 16px/20px "Regular", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > div.advantages {
+		padding : 0 20px;
+		}
+		
+	div.container > section.steps > div > ol,
+	div.container > div.advantages > ul {
+		padding : 20px 0 10px 0;
+		flex-wrap : wrap;
+		-webkit-flex-wrap : wrap;
+		-ms-flex-wrap : wrap;
+		}
+		
+	div.container > div.advantages > ul > li {
+		width : 100%;
+		padding-left : 101px;
+		}
+		
+	div.container > div.advantages > ul > li:not(:last-child) {
+		padding-bottom : 10px;
+		}
+		
+	div.container > div.advantages > ul > li::before {
+		font : normal 36px/55px "Black", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > article > div.brief::before {
+		width : calc(100% - 40px);
+		left : 20px;
+		}
+		
+	div.container > section.steps {
+		padding : 20px 0;
+		}
+		
+	div.container > section.steps > div {
+		padding : 0 20px;
+		}
+		
+	div.container > section.steps > div > ol > li {
+		padding-bottom : 20px;
+		width : 100%;
+		}
+		
+	div.container > section.steps > div > h4 {
+		font : normal 24px/24px "Bold", Arial, Tahoma, Verdana, sans-serif;
 		}
 	}

@@ -1,41 +1,5 @@
 @charset "UTF-8";
 
-div.container > article > div.accent > div > a.button {
-    display: block;
-    position: relative;
-    width: 170px;
-    height: 50px;
-    border: 0;
-    padding: 0 60px 0 20px;
-    margin: 10px auto;
-    background-color: rgba(213, 38, 38, 1);
-    color: rgba(255, 255, 255, 1);
-    font: normal 18px/50px "Bold", Arial, Tahoma, Verdana, sans-serif;
-    text-align : center;
-    text-decoration : none;
-    white-space : nowrap;
-	}
-	
-div.container > article > div.accent > div > a.button::after {
-    display : block;
-    position : absolute;
-    right : 5px;
-    top : 0;
-    z-index : 10;
-    width : 50px;
-    height : 50px;
-    background-image : url(../img/arrow.svg?110320191457);
-    background-repeat : no-repeat;
-    background-position : 50% 50%;
-    background-size: 11px 17px;
-    content : "";
-    transition : right 0.25s ease;
-	}
-	
-div.container > article > div.accent > div > a.button:hover::after {
-	right : 0;
-	}
-
 div.container > article > div.accent > div {
 	background-color : rgba(34, 34, 34, 1);
 	}
