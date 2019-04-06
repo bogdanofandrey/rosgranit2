@@ -6,19 +6,22 @@
     	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0" />
 		<meta name="keywords" content="" />
     	<meta name="description" content="" />
-    	<link rel="stylesheet" href="css/fonts.css?020420191931" />
-    	<link rel="stylesheet" href="css/default.css?020420191931" />
-    	<link rel="stylesheet" href="css/style.css?020420191931" />
-    	<link rel="stylesheet" href="css/header.css?020420191931" />
-    	<link rel="stylesheet" href="css/nav.css?020420191931" />
-    	<link rel="stylesheet" href="css/article.css?020420191931" />
-    	<link rel="stylesheet" href="css/footer.css?020420191931" />
-    	<link rel="stylesheet" href="css/form.css?020420191931" />
-    	<link rel="stylesheet" href="css/callback.css?020420191931" />
-		<script defer src="js/jquery.js?020420191931"></script>
-		<script defer src="js/swiper.js?020420191931"></script>
-		<script defer src="js/inputmask.js?020420191931"></script>
-		<script defer src="js/template.js?020420191931"></script>
+    	<link rel="stylesheet" href="css/fonts.css?020420191838" />
+    	<link rel="stylesheet" href="css/default.css?020420191838" />
+    	<link rel="stylesheet" href="css/style.css?020420191838" />
+    	<link rel="stylesheet" href="css/header.css?020420191838" />
+    	<link rel="stylesheet" href="css/nav.css?020420191838" />
+    	<link rel="stylesheet" href="css/article.css?020420191838" />
+    	<link rel="stylesheet" href="css/map.css?020420191838" />
+    	<link rel="stylesheet" href="css/footer.css?020420191838" />
+    	<link rel="stylesheet" href="css/form.css?020420191838" />
+    	<link rel="stylesheet" href="css/callback.css?020420191838" />
+    	<script defer src="https://api-maps.yandex.ru/2.1.72/?lang=ru_RU"></script>
+		<script defer src="js/jquery.js?020420191838"></script>
+		<script defer src="js/swiper.js?020420191838"></script>
+		<script defer src="js/inputmask.js?020420191838"></script>
+		<script defer src="js/template.js?020420191838"></script>
+		<script defer src="js/map.js?020420191838"></script>
 		<title>«Росгранит» — продукция</title>
 	</head>
 	<body onload="resize();" onresize="resize();">
@@ -99,6 +102,61 @@
 			<!--article>
 
 			</article-->
+			<section class="map">
+				<div>
+					<h4>Где посмотреть продукцию</h4>
+				</div>
+				<div class="map">
+					<div id="map"></div>
+				</div>
+				<div class="oblects">
+					<strong>Офис</strong>
+					<ul>
+						<li>
+							<span>Адрес:</span>
+							<p>Москва, улица Юровская, 95к1, офис 2 (мкр-н Куркино)</p>
+							<a class="location" href="#office" title="На карте" data-coordinates="[55.899981, 37.378189]">На карте</a>
+						</li>
+						<li>
+							<span>Телефоны:</span>
+							<p>+7 (495) 225-25-50</p>
+							<span>многоканальный</span>
+							<p>8 800 555-04-65</p>
+							<span>бесплатная линия для жителей всей России, в т.ч. при звонке с мобильного телефона</span>
+						</li>
+						<li>
+							<span>Режим работы:</span>
+							<p>Пн-Пт, с 9:00 до 18:00</p>
+						</li>
+					</ul>
+					<strong>Склад</strong>
+					<ul>
+						<li>
+							<span>Адрес:</span>
+							<p>Москва, 81 км внешнего кольца МКАД (р-н пересечения Дмитровского ш. и МКАД), 
+							технологический съезд, 700 м в сторону области.</p>
+							<a class="location" href="#warehouse" title="На карте" data-coordinates="[55.913060, 37.529478]">На карте</a>
+						</li>
+						<li>
+							<span>Режим работы:</span>
+							<p>Пн-Пт, с 9:00 до 18:00</p>
+						</li>
+					</ul>
+					<strong>Выставочная площадка в ТВК «Экспострой»</strong>
+					<ul>
+						<li>
+							<span>Адрес:</span>
+							<p>Москва, Нахимовский проспект, д. 24, павильон 2, этаж 1, место 19</p>
+							<a class="location" href="#expo" title="На карте" data-coordinates="[55.670130, 37.583810]">На карте</a>
+						</li>
+						<li>
+							<span>Режим работы:</span>
+							<p>Пн-Сб, с 10:00 до 20:00<br />
+							Вс, с 10:00 до 19:00</p>
+						</li>
+					</ul>
+				</div>
+			</section>
 			<section class="form">
 				<div class="form consultation">
 					<div>
