@@ -9,9 +9,9 @@ div.container > footer > div > ul > li:first-child > * {
 	}
 
 div.container > footer {
-	display : table-row !important;
+	/* display : table-row !important; */
 	width : 100%;
-  	height : 1px;
+  	/* height : 1px; */
 	}
 
 div.container > footer > div {
