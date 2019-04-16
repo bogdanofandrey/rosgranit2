@@ -13,16 +13,19 @@
     	<link rel="stylesheet" href="css/nav.css?120420191630" />
     	<link rel="stylesheet" href="css/article.css?120420191630" />
     	<link rel="stylesheet" href="css/products.css?120420191630" />
+    	<link rel="stylesheet" href="css/choose.css?120420191630" />
     	<link rel="stylesheet" href="css/map.css?120420191630" />
     	<link rel="stylesheet" href="css/footer.css?120420191630" />
     	<link rel="stylesheet" href="css/form.css?120420191630" />
     	<link rel="stylesheet" href="css/callback.css?120420191630" />
-    	<script defer src="https://api-maps.yandex.ru/2.1.72/?lang=ru_RU"></script>
+    	<link rel="stylesheet" href="lightbox/lightbox.css?170220191229" />
+    	<!--script defer src="https://api-maps.yandex.ru/2.1.72/?lang=ru_RU"></script-->
 		<script defer src="js/jquery.js?120420191630"></script>
 		<script defer src="js/swiper.js?120420191630"></script>
 		<script defer src="js/inputmask.js?120420191630"></script>
 		<script defer src="js/template.js?120420191630"></script>
 		<script defer src="js/map.js?120420191630"></script>
+		<script defer src="lightbox/lightbox.js?170220191229"></script>
 		<title>«Росгранит» — продукция</title>
 	</head>
 	<body onload="resize();" onresize="resize();">
@@ -104,13 +107,23 @@
 				<div class="brief">
 					<h1>Продукция</h1>
 				</div>
+				<div class="choose-items">
+					<span></span>
+					<ul>
+						<li class="selected" data-class="gb2">Брусчатка гранитная колотая</li>
+						<li data-class="gb3">Брусчатка гранитная пилено-колотая (боковины пиленые)</li>
+					</ul>
+				</div>
 			</article>
 			<div class="table">
 				<table class="gb2">
 					<tbody>
 						<tr>
 							<td class="image">
-								<img src="img/bg6221.jpg" alt="Габбро брусчатка колотая ГАЛТОВАННАЯ" />
+								<a href="img/bg6221.jpg" data-lightbox="example-set" title="">
+									<img src="img/bg6221.jpg" alt="Габбро брусчатка колотая ГАЛТОВАННАЯ" />
+								</a>
+							</td>
 							<td class="name">
 								<strong>Габбро брусчатка колотая ГАЛТОВАННАЯ</strong>
 								<span>Габбро Слипчицкое (Kometa Black GB2), Адамовское</span>
@@ -134,7 +147,41 @@
 						</tr>
 						<tr>
 							<td class="image">
-								<img src="img/bg6221.jpg" alt="Габбро брусчатка колотая ГАЛТОВАННАЯ" />
+								<a href="img/bg6221.jpg" data-lightbox="example-set" title="">
+									<img src="img/bg6221.jpg" alt="Габбро брусчатка колотая ГАЛТОВАННАЯ" />
+								</a>
+							</td>
+							<td class="name">
+								<strong>Габбро брусчатка колотая ГАЛТОВАННАЯ</strong>
+								<span>Габбро Слипчицкое (Kometa Black GB2), Адамовское</span>
+								<a href="#" title="Пример укладки">Пример укладки</a>
+							</td>
+							<td class="size">
+								<span>6-14×6-14×2-8</span>
+							</td>
+							<td class="count">
+								<span>82</span>
+							</td>
+							<td class="available">
+								<span>125,36</span>
+							</td>
+							<td class="price">
+								<span>1 250,36</span>
+							</td>
+							<td class="order">
+								<button type="button">Заказать</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="gb3">
+					<tbody>
+						<tr>
+							<td class="image">
+								<a href="img/bg6221.jpg" data-lightbox="example-set" title="">
+									<img src="img/bg6221.jpg" alt="Габбро брусчатка колотая ГАЛТОВАННАЯ" />
+								</a>
+							</td>
 							<td class="name">
 								<strong>Габбро брусчатка колотая ГАЛТОВАННАЯ</strong>
 								<span>Габбро Слипчицкое (Kometa Black GB2), Адамовское</span>

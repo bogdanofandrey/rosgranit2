@@ -50,8 +50,12 @@ div.container > div.properties > ul > li:nth-child(2) {
 /* div.container > div.table > table {
 	background-color : rgba(150, 150, 150, 1);
 	} */
+	
+div.container > div.table > table {
+	display : none;
+	}
 
-div.container > div.table > table,
+div.container > div.table > table.selected,
 div.container > div.table > table > tbody,
 div.container > div.table > table > tbody > tr > td > span,
 div.container > div.table > table > tbody > tr > td > strong,
@@ -81,7 +85,12 @@ div.container > div.table > table > tbody > tr > td > strong {
 	color : rgba(255, 255, 255, 1);	
 	}
 	
-div.container > div.table > table > tbody > tr > td.image > img {
+div.container > div.table > table > tbody > tr > td.image > a {
+	display : block;
+	text-decoration : none;
+	}
+	
+div.container > div.table > table > tbody > tr > td.image > a > img {
 	width : 100%;
 	height : auto;
 	}
