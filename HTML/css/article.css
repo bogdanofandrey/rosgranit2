@@ -135,10 +135,6 @@ div.container > article > div.brief > ul > li > a > img {
 	transform : translate(-50%, -50%);
 	}
 
-div.container > article > div.brief > ul > li > a:hover > img {
-
-	}	
-	
 div.container > article > div.brief > ul > li > a > p {
 	position : absolute;
 	bottom : 0;
