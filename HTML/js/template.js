@@ -235,10 +235,15 @@ $(document).ready(function() {
 		
 
 
-	if ($('div.choose-items > ul > li.selected').lenght !== 0) {
+	if ($('div.choose-items > ul > li.selected').lenght !== 0 && $('.choice').lenght !== 0) {
 		$('div.choose-items > span').html($('div.choose-items > ul > li.selected').html());		
-		$('div.container > div.table > table').removeClass('selected');
-		$('div.container > div.table > table.' + $('div.choose-items > ul > li.selected').data('class')).addClass('selected');
+		$('.choice').removeClass('selected');
+		if ($('div.choose-items > ul > li.selected').data('class')) {
+			$('.choice.' + $('div.choose-items > ul > li.selected').data('class')).addClass('selected');
+			}
+		else {
+			$('.choice').addClass('selected');
+			}
 		}
 	$('div.choose-items').on('click', 'span', function() {
 		var position = $(this).position();
@@ -255,8 +260,13 @@ $(document).ready(function() {
 		if ($('div.choose-items > span').hasClass('selected')) {
 			$('div.choose-items > span').removeClass('selected');
 			}
-		$('div.container > div.table > table').removeClass('selected');
-		$('div.container > div.table > table.' + $(this).data('class')).addClass('selected');
+		$('.choice').removeClass('selected');
+		if ($(this).data('class')) {
+			$('.choice.' + $(this).data('class')).addClass('selected');
+			}
+		else {
+			$('.choice').addClass('selected');
+			}
 		$('div.choose-items > ul').css({'display' : 'none'});
 		});
 		
