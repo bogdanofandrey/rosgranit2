@@ -106,7 +106,7 @@ div.container > article > div.brief > ul > li > a {
 	overflow : hidden;
 	}
 	
-div.container > article > div.brief > ul > li:not(.choice) > a::before {
+div.container > article > div.brief > ul > li > a::before {
 	display : block;
 	position : absolute;
 	top : 0;
@@ -115,9 +115,16 @@ div.container > article > div.brief > ul > li:not(.choice) > a::before {
 	width : 100%;
 	height : 100%;
 	background-color : rgba(26, 26, 26, 1);
-	opacity : 0.5;
 	content : "";
 	transition : opacity 0.25s ease;
+	}
+	
+div.container > article > div.brief > ul:not(.gallery) > li > a::before {
+	opacity : 0.5;
+	}
+	
+div.container > article > div.brief > ul.gallery > li > a::before {
+	opacity : 0;
 	}
 	
 div.container > article > div.brief > ul > li > a:hover::before {
