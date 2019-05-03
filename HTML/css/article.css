@@ -88,6 +88,14 @@ div.container > article > div.brief > ul {
 	list-style : none;	
 	}
 	
+div.container > article > div.brief > ul > li.choice {
+	display : none;
+	}
+	
+div.container > article > div.brief > ul > li.choice.selected {
+	display : block;
+	}
+	
 div.container > article > div.brief > ul > li > a {
 	position : relative;
 	display : block;
@@ -180,12 +188,8 @@ div.container > article > div.brief > ul > li > a:hover > p > span {
 		}
 		
 	div.container > article > div.brief > ul > li {
-		width : 32%;
-		margin : 2% 2% 0 0;
-		}
-		
-	div.container > article > div.brief > ul > li:nth-child(3n) {
-		margin : 2% 0 0 0;
+		width : 32.3333%;
+		margin : 1% 1% 0 0;
 		}
 		
 	div.container > article > div.brief > ul > li > a > p > strong {
@@ -239,12 +243,8 @@ div.container > article > div.brief > ul > li > a:hover > p > span {
 		}
 		
 	div.container > article > div.brief > ul > li {
-		width : 32%;
-		margin : 2% 2% 0 0;
-		}
-		
-	div.container > article > div.brief > ul > li:nth-child(3n) {
-		margin : 2% 0 0 0;
+		width : 32.3333%;
+		margin : 1% 1% 0 0;
 		}
 		
 	div.container > article > div.brief > ul > li > a > p > strong {
@@ -381,11 +381,7 @@ div.container > article > div.brief > ul > li > a:hover > p > span {
 @media (min-width : 769px) and (max-width : 1040px) {
 	div.container > article > div.brief > ul > li {
 		width : 49%;
-		margin : 2% 2% 0 0;
-		}
-		
-	div.container > article > div.brief > ul > li:nth-child(2n) {
-		margin : 2% 0 0 0;
+		margin : 1% 1% 0 0;
 		}
 		
 	div.container > article > div.brief > ul > li > a > p > strong {
