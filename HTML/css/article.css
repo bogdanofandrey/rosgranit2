@@ -106,7 +106,7 @@ div.container > article > div.brief > ul > li > a {
 	overflow : hidden;
 	}
 	
-div.container > article > div.brief > ul > li > a::before {
+div.container > article > div.brief > ul > li:not(.choice) > a::before {
 	display : block;
 	position : absolute;
 	top : 0;
