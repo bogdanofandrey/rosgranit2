@@ -6,25 +6,25 @@
     	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0" />
 		<meta name="keywords" content="" />
     	<meta name="description" content="" />
-    	<link rel="stylesheet" href="css/fonts.css?160420191849" />
-    	<link rel="stylesheet" href="css/default.css?160420191849" />
-    	<link rel="stylesheet" href="css/style.css?160420191849" />
-    	<link rel="stylesheet" href="css/header.css?160420191849" />
-    	<link rel="stylesheet" href="css/nav.css?160420191849" />
-    	<link rel="stylesheet" href="css/article.css?160420191849" />
-    	<link rel="stylesheet" href="css/products.css?160420191849" />
-    	<link rel="stylesheet" href="css/choose.css?160420191849" />
-    	<link rel="stylesheet" href="css/map.css?160420191849" />
-    	<link rel="stylesheet" href="css/footer.css?160420191849" />
-    	<link rel="stylesheet" href="css/form.css?160420191849" />
-    	<link rel="stylesheet" href="css/callback.css?160420191849" />
+    	<link rel="stylesheet" href="css/fonts.css?180520191448" />
+    	<link rel="stylesheet" href="css/default.css?180520191448" />
+    	<link rel="stylesheet" href="css/style.css?180520191448" />
+    	<link rel="stylesheet" href="css/header.css?180520191448" />
+    	<link rel="stylesheet" href="css/nav.css?180520191448" />
+    	<link rel="stylesheet" href="css/article.css?180520191448" />
+    	<link rel="stylesheet" href="css/products.css?180520191448" />
+    	<link rel="stylesheet" href="css/choose.css?180520191448" />
+    	<link rel="stylesheet" href="css/map.css?180520191448" />
+    	<link rel="stylesheet" href="css/footer.css?180520191448" />
+    	<link rel="stylesheet" href="css/form.css?180520191448" />
+    	<link rel="stylesheet" href="css/callback.css?180520191448" />
     	<link rel="stylesheet" href="lightbox/lightbox.css?300420191318" />
     	<!--script defer src="https://api-maps.yandex.ru/2.1.72/?lang=ru_RU"></script-->
-		<script defer src="js/jquery.js?160420191849"></script>
-		<script defer src="js/swiper.js?160420191849"></script>
-		<script defer src="js/inputmask.js?160420191849"></script>
-		<script defer src="js/template.js?160420191849"></script>
-		<script defer src="js/map.js?160420191849"></script>
+		<script defer src="js/jquery.js?180520191448"></script>
+		<script defer src="js/swiper.js?180520191448"></script>
+		<script defer src="js/inputmask.js?180520191448"></script>
+		<script defer src="js/template.js?180520191448"></script>
+		<script defer src="js/map.js?180520191448"></script>
 		<script defer src="lightbox/lightbox.js?300420191318"></script>
 		<title>«Росгранит» — продукция</title>
 	</head>
@@ -145,9 +145,13 @@
 								<span>1 250,36</span>
 							</td>
 							<td class="order">
-								<button type="button">Заказать</button>
+								<button type="button" data-id="1" data-name="Габбро брусчатка колотая ГАЛТОВАННАЯ">Заказать</button>
 							</td>
 						</tr>
+					</tbody>
+				</table>
+				<table class="choice gb2">
+					<tbody>
 						<tr>
 							<td class="image">
 								<a class="zoom" href="img/bg6221.jpg" data-lightbox="example-set" title="">
@@ -172,7 +176,7 @@
 								<span>1 250,36</span>
 							</td>
 							<td class="order">
-								<button type="button">Заказать</button>
+								<button type="button" data-id="2" data-name="Габбро брусчатка колотая ГАЛТОВАННАЯ">Заказать</button>
 							</td>
 						</tr>
 					</tbody>
@@ -203,11 +207,88 @@
 								<span>1 250,36</span>
 							</td>
 							<td class="order">
-								<button type="button">Заказать</button>
+								<button type="button" data-id="3" data-name="Габбро брусчатка колотая ГАЛТОВАННАЯ">Заказать</button>
 							</td>
 						</tr>
 					</tbody>
 				</table>
+			</div>			
+			<div class="form order">
+				<button type="button" data-form="order"></button>
+				<div>
+					<span>Спасибо!</span>
+					<p>Ваш заказ успешно отправлен. В ближайшее время, для уточнения деталей заказа, с Вами свяжется наш специалист.</p>
+				</div>
+				<form name="application" method="post" action="#">
+					<input type="hidden" name="product" value="" />
+					<h4>Оформление заказа</h4>
+					<p></p>				
+					<div>
+						<div>
+							<ul>
+								<li class="required">
+									<input class="field" type="text" name="uname" value="" data-form="order" />
+									<span>
+										<span>Ваше имя</span>
+									</span>
+								</li>
+								<li class="required">
+									<input class="field" type="email" name="uemail" value="" data-form="order" />
+									<span>
+										<span>Ваш E-mail</span>
+									</span>
+								</li>
+								<li>
+									<input class="field" type="tel" name="uphone" value="" data-form="order" />
+									<span>
+										<span>Ваш телефон</span>
+									</span>
+								</li>
+								<li>
+									<input class="field" type="text" name="uaddr" value="" data-form="order" />
+									<span>
+										<span>Адрес доставки</span>
+									</span>
+								</li>
+							</ul>
+						</div>
+						<div class="textarea">
+							<textarea class="field" name="umessage"></textarea>
+							<span>
+								<span>Комментарий к заказу</span>
+							</span>
+						</div>
+						<span>Дополнительные услуги</span>
+						<div class="checkbox services">
+							<input type="checkbox" name="s1" value="Y" />
+							<span class="checkbox" data-form="order"></span>
+							<span>Укладка брусчатки</span>
+						</div>
+						<div class="checkbox services">
+							<input type="checkbox" name="s2" value="Y" />
+							<span class="checkbox" data-form="order"></span>
+							<span>Облицовка здания (экстерьер)</span>
+						</div>
+						<div class="checkbox services">
+							<input type="checkbox" name="s3" value="Y" />
+							<span class="checkbox" data-form="order"></span>
+							<span>Облицовка здания (интерьер)</span>
+						</div>
+						<div class="checkbox services">
+							<input type="checkbox" name="s4" value="Y" />
+							<span class="checkbox" data-form="order"></span>
+							<span>Услуги манипулятора</span>
+						</div>
+						<div class="required consent">
+							<input type="checkbox" name="consent" value="Y" />
+							<span class="checkbox" data-form="order"></span>
+							<span>Даю <a href="#" title="согласие">согласие</a> на обработку персональных данных</span>
+						</div>
+						<div>
+							<button type="button" data-form="order">Заказать</button>
+						</div>
+					</div>
+				</form>	
 			</div>
 			<div class="properties">
 				<ul>
