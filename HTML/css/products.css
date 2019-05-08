@@ -176,15 +176,14 @@ div.container > div.table > table > tbody > tr > td.order > button:hover {
 
 /* форма заказа  -- начало */
 div.container > div.form.order {
-	display : block;
-	max-width : 1160px;
+	display : none;
 	border-top : solid 1px rgba(34, 34, 34, 1);
 	border-right : solid 1px rgba(34, 34, 34, 1);
 	border-left : solid 1px rgba(34, 34, 34, 1);
 	}
 	
 div.container > div.form.order > form > div > span {
-	display : none;
+	display : block;
 	width : 100%;
 	margin-top : 15px;
 	color : rgba(255, 255, 255, 1);
@@ -247,6 +246,7 @@ div.container > div.form.order > form > div > span {
 		
 	div.container > div.form.order {
 		width : calc(100% - 120px);
+		max-width : 1160px;
 		padding : 60px;
 		}
 		
@@ -312,6 +312,7 @@ div.container > div.form.order > form > div > span {
 		
 	div.container > div.form.order {
 		width : calc(100% - 100px);
+		max-width : 1180px;
 		padding : 50px;
 		}
 		
