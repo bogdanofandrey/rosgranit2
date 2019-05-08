@@ -44,6 +44,54 @@ div.form > form > div > div > ul > li {
 	position : relative;
 	}
 	
+div.form > button {
+	position : absolute;
+	bottom : calc(100% - 60px);
+	left : calc(100% - 60px);
+	z-index : 10;
+    width : 40px;
+    height : 40px;
+    margin-bottom : 10px;
+	background-color : rgba(0, 0, 0, 0);
+	border : 0;
+	transition : all 0.25s ease;
+	}
+	
+div.form > button:hover {
+	transform : scale(1.2);
+	cursor : pointer;
+	}
+	
+div.form > button:hover::before, 
+div.form > button:hover::after {
+	background-color : rgba(255, 255, 255, 1);
+	}
+	
+div.form > button::before, 
+div.form > button::after {
+    position : absolute;
+    top : 50%;
+    left : 50%;
+    background-color : rgba(88, 88, 88, 1);
+    content : '.';
+    text-indent : -999em;
+    transform : rotate(45deg);
+    overflow : hidden;
+    transition : all 0.25s ease;
+	}
+	
+div.form > button::before {
+    margin : -15px 0 0 -1px;
+    width : 2px;
+    height : 30px;
+	}
+	
+div.form > button::after {
+    margin : -1px 0 0 -15px;
+    width : 30px;
+    height : 2px;
+	}
+	
 div.form > form > div > div {
 	width : 100%;
 	min-width : 280px;
@@ -183,7 +231,8 @@ div.form > form > div > div > button.active {
 	background-color : rgba(213, 38, 38, 1);
 	cursor : pointer;
 	}
-	
+
+div.container > div.form.order > form > div > div > button,	
 div.form.consultation > form > div > div > button {
 	max-width : 200px;
 	}
@@ -249,15 +298,22 @@ div.form > form > div > div:last-child {
 	margin-top : 20px !important;
 	}
 	
+div.form > form > div > div.checkbox {
+	margin : 10px 0 !important;
+	}
+
+div.form > form > div > div.checkbox,	
 div.form > form > div > div.consent {
 	padding : 0 0 0 40px;
 	font : normal 16px/24px "Regular", Arial, Tahoma, Verdana, sans-serif;
 	}
-	
+
+div.form > form > div > div.checkbox > input[type=checkbox],	
 div.form > form > div > div.consent > input[type=checkbox] {
 	display : none !important;
 	}
-	
+
+div.form > form > div > div.checkbox > span.checkbox,	
 div.form > form > div > div.consent > span.checkbox {
 	display : block;
 	position : absolute;
@@ -266,15 +322,23 @@ div.form > form > div > div.consent > span.checkbox {
 	z-index : 1;
 	width : 24px;
 	height : 24px;
-	border : 1px solid rgba(213, 38, 38, 1);
 	background-color : rgba(26, 26, 26, 1);
 	cursor : pointer;
+	}
+	
+div.form > form > div > div.consent > span.checkbox {
+	border : 1px solid rgba(213, 38, 38, 1);
+	}
+	
+div.form > form > div > div.checkbox > span.checkbox {
+	border : 1px solid rgba(88, 88, 88, 1);
 	}
 	
 div.form > form > div > div.consent > span.checkbox.checked {
 	background-color : rgba(213, 38, 38, 1);
 	}
-	
+
+div.form > form > div > div.checkbox > span.checkbox.checked::before,	
 div.form > form > div > div.consent > span.checkbox.checked::before {
 	position : absolute;
 	content : "";
@@ -283,10 +347,18 @@ div.form > form > div > div.consent > span.checkbox.checked::before {
 	z-index : 20;
 	width : 8px;
 	height : 4px;
-	border-left : solid 2px rgba(255, 255, 255, 1);
-	border-bottom : solid 2px rgba(255, 255, 255, 1);
 	content : "";
 	transform : rotate(-45deg);
+	}
+	
+div.form > form > div > div.consent > span.checkbox.checked::before {
+	border-left : solid 2px rgba(255, 255, 255, 1);
+	border-bottom : solid 2px rgba(255, 255, 255, 1);	
+	}
+	
+div.form > form > div > div.checkbox > span.checkbox.checked::before {
+	border-left : solid 2px rgba(213, 38, 38, 1);
+	border-bottom : solid 2px rgba(213, 38, 38, 1);	
 	}
 	
 div.form > form > div > div.consent > span > a {
@@ -362,6 +434,7 @@ div.form > form > div > div.consent > span > a:hover {
 	}
 	
 @media (min-width : 861px) {
+	div.container > div.form.order > form > div > div,
 	div.form.consultation > form > div > div {
 		width : 48%;
 		}
