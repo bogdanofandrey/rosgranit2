@@ -172,9 +172,24 @@ div.container > div.table > table > tbody > tr > td.order > button:hover {
 	color : rgba(255, 255, 255, 1);
 	opacity : 1;
 	}
-	
-
 /* таблица -- конец */
+
+/* форма заказа  -- начало */
+div.container > div.form.order {
+	display : none;
+	max-width : 1160px;
+	border-top : solid 1px rgba(34, 34, 34, 1);
+	border-right : solid 1px rgba(34, 34, 34, 1);
+	border-left : solid 1px rgba(34, 34, 34, 1);
+	}
+	
+div.container > div.form.order > form > div > span {
+	display : block;
+	width : 100%;
+	margin-top : 15px;
+	color : rgba(255, 255, 255, 1);
+	}
+/* форма заказа  -- конец */
 
 @media (min-width : 1401px) {
 	div.container > div.table,
@@ -228,6 +243,15 @@ div.container > div.table > table > tbody > tr > td.order > button:hover {
 	div.container > div.table > table > tbody > tr > td.available > span,
 	div.container > div.table > table > tbody > tr > td.price > span {
 		font : normal 16px/50px "Regular", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > div.form.order {
+		width : calc(100% - 120px);
+		padding : 60px;
+		}
+		
+	div.container > div.form.order > form > div > span {
+		font : normal 28px/60px "Bold", Arial, Tahoma, Verdana, sans-serif;
 		}
 	}
 	
@@ -283,6 +307,15 @@ div.container > div.table > table > tbody > tr > td.order > button:hover {
 	div.container > div.table > table > tbody > tr > td.available > span,
 	div.container > div.table > table > tbody > tr > td.price > span {
 		font : normal 16px/50px "Regular", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > div.form.order {
+		width : calc(100% - 100px);
+		padding : 50px;
+		}
+		
+	div.container > div.form.order > form > div > span {
+		font : normal 26px/50px "Bold", Arial, Tahoma, Verdana, sans-serif;
 		}
 	}
 	
@@ -349,6 +382,15 @@ div.container > div.table > table > tbody > tr > td.order > button:hover {
 	div.container > div.table > table > tbody > tr > td.price > span {
 		padding-top : 20px;
 		font : normal 16px/20px "Regular", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > div.form.order {
+		width : calc(100% - 80px);
+		padding : 40px;
+		}
+		
+	div.container > div.form.order > form > div > span {
+		font : normal 24px/60px "Bold", Arial, Tahoma, Verdana, sans-serif;
 		}
 	}
 	
@@ -420,6 +462,15 @@ div.container > div.table > table > tbody > tr > td.order > button:hover {
 	div.container > div.table > table > tbody > tr > td.available > span,
 	div.container > div.table > table > tbody > tr > td.price > span {
 		font : normal 16px/50px "Regular", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > div.form.order {
+		width : calc(100% - 60px);
+		padding : 30px;
+		}
+		
+	div.container > div.form.order > form > div > span {
+		font : normal 22px/50px "Bold", Arial, Tahoma, Verdana, sans-serif;
 		}
 	}
 	
@@ -503,5 +554,14 @@ div.container > div.table > table > tbody > tr > td.order > button:hover {
 	div.container > div.table > table > tbody > tr > td.available > span,
 	div.container > div.table > table > tbody > tr > td.price > span {
 		font : normal 16px/30px "Regular", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > div.form.order {
+		width : calc(100% - 40px);
+		padding : 20px;
+		}
+		
+	div.container > div.form.order > form > div > span {
+		font : normal 20px/40px "Bold", Arial, Tahoma, Verdana, sans-serif;
 		}
 	}
