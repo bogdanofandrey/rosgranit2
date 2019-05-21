@@ -30,35 +30,14 @@ div.container > header > div > a.phone {
 div.container > header > div > a.logo {
 	top : calc(50% - 22px);
 	left : 0;
-	width : 124px;
-	height : 44px;
 	background-image : url("../img/logo.svg?160320191555");
 	background-repeat : no-repeat;
 	background-position : 50% 50%;
 	background-size : contain;
 	}
 	
-div.container > header > div > a.logo::before {
-	position : absolute;
-	top : 0;
-	left : 100%;
-	z-index : 10;
-	padding-left : 20px;
-	font : normal 12px/16px "Regular", Arial, Tahoma, Verdana, sans-serif;
-	white-space : pre;
-	content : "Торгово-\Aпроизводственное\Aобъединение";
-	color : rgba(88, 88, 88, 1);
-	transition : all 0.25s ease;
-	}
-	
-div.container > header > div > a.logo:hover::before  {
-	padding-left : 25px;
-	color : rgba(26, 26, 26, 1);
-	}
-	
 div.container > header > div > a.phone {
 	right : 0;
-	font : normal 18px/22px "Bold", Arial, Tahoma, Verdana, sans-serif;
 	color : rgba(88, 88, 88, 1);
 	transition : all 0.25s ease;
 	}
@@ -110,6 +89,26 @@ div.container.opened > header > div > ul.sandwich > li:last-child { display : no
 div.container.opened > header > div > ul.sandwich > li:first-child { transform : rotate(45deg); }
 div.container.opened > header > div > ul.sandwich > li:nth-child(2) { transform : rotate(-45deg); }
 
+@media (min-width : 861px) {
+	div.container > header > div > a.logo::before {
+		position : absolute;
+		top : 0;
+		left : 100%;
+		z-index : 10;
+		padding-left : 20px;
+		font : normal 12px/16px "Regular", Arial, Tahoma, Verdana, sans-serif;
+		white-space : pre;
+		content : "Торгово-\Aпроизводственное\Aобъединение";
+		color : rgba(88, 88, 88, 1);
+		transition : all 0.25s ease;
+		}
+	
+	div.container > header > div > a.logo:hover::before  {
+		padding-left : 25px;
+		color : rgba(26, 26, 26, 1);
+		}
+	}
+
 @media (min-width : 1401px) {
 	div.container > header {
 		padding : 0 60px;
@@ -118,9 +117,15 @@ div.container.opened > header > div > ul.sandwich > li:nth-child(2) { transform 
 	div.container > header > div > ul.sandwich {
 		display : none;
 		}
+		
+	div.container > header > div > a.logo {
+		width : 124px;
+		height : 44px;
+		}
 	
 	div.container > header > div > a.phone {
 		top : 45px;
+		font : normal 18px/22px "Bold", Arial, Tahoma, Verdana, sans-serif;
 		}
 	}
 	
@@ -134,11 +139,13 @@ div.container.opened > header > div > ul.sandwich > li:nth-child(2) { transform 
 		}
 		
 	div.container > header > div > a.logo {
-		left : 0;
+		width : 124px;
+		height : 44px;
 		}
 		
 	div.container > header > div > a.phone {
 		top : 45px;
+		font : normal 18px/22px "Bold", Arial, Tahoma, Verdana, sans-serif;
 		}
 	}
 	
@@ -151,12 +158,18 @@ div.container.opened > header > div > ul.sandwich > li:nth-child(2) { transform 
 		display : none;
 		}
 		
+	div.container > header > div > a.logo {
+		width : 124px;
+		height : 44px;
+		}
+		
 	div.container > header > div > a.logo::before {
 		display : none;
 		}
 		
 	div.container > header > div > a.phone {
 		top : 45px;
+		font : normal 18px/22px "Bold", Arial, Tahoma, Verdana, sans-serif;
 		}
 	}
 	
@@ -172,12 +185,18 @@ div.container.opened > header > div > ul.sandwich > li:nth-child(2) { transform 
 		left : 0;
 		}
 		
+	div.container > header > div > a.logo {
+		width : 124px;
+		height : 44px;
+		}
+				
 	div.container > header > div > a.logo::before {
 		display : none;
 		}
 		
 	div.container > header > div > a.phone {
 		top : 45px;
+		font : normal 18px/22px "Bold", Arial, Tahoma, Verdana, sans-serif;
 		}
 	}
 	
@@ -190,11 +209,7 @@ div.container.opened > header > div > ul.sandwich > li:nth-child(2) { transform 
 		display : block;
 		}
 		
-	div.container > header > div > a.phone {
-		display : none;
-		}
-		
-	div.container.opened > header > div > a.phone {
+	/* div.container.opened > header > div > a.phone {
 		display : block;
 		left : -20px;
 		top : calc(100vh - 40px);
@@ -207,5 +222,15 @@ div.container.opened > header > div > ul.sandwich > li:nth-child(2) { transform 
 		
 	div.container.opened > header > div > a.phone:hover {
 		background-color : rgba(88, 88, 88, 1);
+		} */
+		
+	div.container > header > div > a.logo {
+		width : 113px;
+		height : 40px;
+		}
+	
+	div.container > header > div > a.phone {
+		top : 41px;
+		font : normal 16px/22px "Bold", Arial, Tahoma, Verdana, sans-serif;
 		}
 	}
