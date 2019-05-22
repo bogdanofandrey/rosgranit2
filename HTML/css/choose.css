@@ -21,16 +21,16 @@ div.choose-items > ul > li {
 	border-bottom : 1px dashed rgba(88, 88, 88, 1);
 	}
 	
-div.choose-items > span + ul > li:hover {
+div.choose-items > ul > li:hover {
 	border-bottom : 1px dashed rgba(255, 255, 255, 1);
 	}
 	
-div.choose-items > span + ul > li.selected {
+div.choose-items > ul > li.selected {
 	border-bottom : 0;
 	}
 
-div.choose-items > span + ul > li.selected,	
-div.choose-items > span + ul > li:hover {
+div.choose-items > ul > li.selected,	
+div.choose-items > ul > li:hover {
 	color : rgba(255, 255, 255, 1);
 	}
 
