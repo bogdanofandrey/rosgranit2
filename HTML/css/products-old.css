@@ -1,0 +1,573 @@
+@charset "UTF-8";
+
+div.container > div.table,
+div.container > div.properties {
+	width : 100%;
+	margin : 0 auto;
+	}
+
+/* свойства -- начало */
+div.container > div.properties > ul {
+	display : flex;
+	display : -webkit-box;
+	display : -webkit-flex;
+	display : -ms-flexbox;
+	width : 100%;
+	margin : 0;
+	border : solid 1px rgba(34, 34, 34, 1);
+	list-style : none;
+	}
+	
+div.container > div.properties > ul > li {
+	background-repeat : no-repeat;
+	font : normal 18px/24px "Regular", Arial, Tahoma, Verdana, sans-serif;
+	color : rgba(91, 91, 91, 1);
+	}
+	
+div.container > div.properties > ul > li > strong {
+	font : normal 18px/24px "Regular", Arial, Tahoma, Verdana, sans-serif;
+	color : rgba(255, 255, 255, 1);	
+	}
+	
+div.container > div.properties > ul > li:first-child {
+	background-image : url("../img/icon-opisainie-01.svg");
+	background-size : 73px 65px;	
+	}
+	
+div.container > div.properties > ul > li:last-child {
+	background-image : url("../img/icon-opisainie-03.svg");
+	background-size : 71px 61px;
+	}
+	
+div.container > div.properties > ul > li:nth-child(2) {
+	background-image : url("../img/icon-opisainie-02.svg");
+	background-size : 66px 64px;
+	}
+/* свойства -- конец */
+
+/* таблица -- начало */
+
+/* div.container > div.table > table {
+	background-color : rgba(150, 150, 150, 1);
+	} */
+	
+div.container > div.table > table {
+	display : none;
+	}
+
+div.container > div.table > table.selected,
+div.container > div.table > table > tbody,
+div.container > div.table > table > tbody > tr > td > span,
+div.container > div.table > table > tbody > tr > td > strong,
+div.container > div.table > table > tbody > tr > td > a {
+	display : block; 
+	}
+	
+div.container > div.table > table > tbody > tr {
+	position : relative;
+	display : flex;
+	display : -webkit-box;
+	display : -webkit-flex;
+	display : -ms-flexbox;
+	border-top : solid 1px rgba(34, 34, 34, 1);
+	border-right : solid 1px rgba(34, 34, 34, 1);
+	border-left : solid 1px rgba(34, 34, 34, 1);
+	}
+	
+/* div.container > div.table > table > tbody > tr:nth-child(odd) { background-color : rgba(255, 255, 255, 1); }
+div.container > div.table > table > tbody > tr:nth-child(even) { background-color : rgba(250, 250, 250, 1); } */
+	
+div.container > div.table > table > tbody > tr > td > span {
+	color : rgba(88, 88, 88, 1);
+	}
+	
+div.container > div.table > table > tbody > tr > td > strong {
+	color : rgba(255, 255, 255, 1);	
+	}
+	
+div.container > div.table > table > tbody > tr > td.image > a > img {
+	width : 100%;
+	height : auto;
+	transition : opacity 0.25s ease;
+	}
+	
+div.container > div.table > table > tbody > tr > td.name > span {
+	font : normal 14px/20px "Regular", Arial, Tahoma, Verdana, sans-serif;	
+	}
+
+div.container > div.table > table > tbody > tr > td.name > strong {
+	font : normal 16px/20px "Regular", Arial, Tahoma, Verdana, sans-serif;
+	}
+	
+div.container > div.table > table > tbody > tr > td.name > a {
+	position : relative;
+	height : 30px;
+	padding-left : 30px;
+	color : rgba(213, 38, 38, 1);
+	font : normal 14px/30px "Regular", Arial, Tahoma, Verdana, sans-serif;
+	text-decoration : none;
+	opacity : 0.5;
+	transition : opacity 0.25s ease;
+	}
+	
+div.container > div.table > table > tbody > tr > td.name > a:hover {
+	opacity : 1;
+	}
+	
+div.container > div.table > table > tbody > tr > td.name > a::before {
+	display : block;
+	position : absolute;
+	left : 0;
+	top : calc(50% - 10px);
+	z-index : 10;
+	width : 20px;
+	height : 20px;
+	background-image : url("../img/icon-photo.svg?110320191457");
+	background-repeat : no-repeat;
+	background-position : 50% 50%;
+	background-size : contain;	
+	content : "";
+	}
+	
+div.container > div.table > table > tbody > tr > td.size > span,
+div.container > div.table > table > tbody > tr > td.count > span,
+div.container > div.table > table > tbody > tr > td.available > span,
+div.container > div.table > table > tbody > tr > td.price > span {
+	white-space : nowrap;
+	}
+	
+div.container > div.table > table > tbody > tr > td.count > span::after {
+	content : "\0000a0шт\0000a0в\0000a0м²\0000a0";
+	}
+	
+div.container > div.table > table > tbody > tr > td.available > span::after {
+	content : "\0000a0м²\0000a0";
+	}
+	
+div.container > div.table > table > tbody > tr > td.price > span::after {
+	content : "\0000a0₽\0000a0";
+	}
+	
+div.container > div.table > table > tbody > tr > td.order > button {
+	display : block;
+	position : relative;
+	width : 100%;
+	max-width : 180px;
+	height : 50px;
+	padding : 0;
+	margin : 0;
+	border : solid 2px rgba(213, 38, 38, 1);
+	background-color : rgba(213, 38, 38, 0);
+	color : rgba(213, 38, 38, 1);
+	font : normal 16px/40px "Bold", Arial, Tahoma, Verdana, sans-serif;
+	text-align : center;
+	white-space : nowrap;
+	cursor : pointer;
+	opacity : 0.5;
+	transition : all 0.25s ease;
+	}
+
+div.container > div.table > table > tbody > tr > td.order > button:hover {
+	background-color : rgba(213, 38, 38, 1);
+	color : rgba(255, 255, 255, 1);
+	opacity : 1;
+	}
+/* таблица -- конец */
+
+/* форма заказа  -- начало */
+div.container > div.form.order {
+	display : none;
+	border-top : solid 1px rgba(34, 34, 34, 1);
+	border-right : solid 1px rgba(34, 34, 34, 1);
+	border-left : solid 1px rgba(34, 34, 34, 1);
+	}
+	
+div.container > div.form.order > form > div > span {
+	display : block;
+	width : 100%;
+	margin-top : 15px;
+	color : rgba(255, 255, 255, 1);
+	}
+/* форма заказа  -- конец */
+
+@media (min-width : 1401px) {
+	div.container > div.table,
+	div.container > div.properties {
+		max-width : 1280px;
+		padding : 0 60px;		
+		}
+	
+	div.container > div.properties > ul {
+		padding : 60px;
+		justify-content : space-between;
+		-webkit-justify-content : space-between;
+		-ms-justify-content : space-between;
+		}
+		
+	div.container > div.properties > ul > li {
+		background-position : 50% 0;
+		width : 30%;
+		padding-top : 85px;
+		}
+		
+	div.container > div.table > table > tbody > tr {
+		padding : 30px 0;
+		justify-content : space-between;
+		-webkit-justify-content : space-between;
+		-ms-justify-content : space-between;
+		}
+		
+	div.container > div.table > table > tbody > tr > td {
+		padding-left : 30px;
+		}
+		
+	div.container > div.table > table > tbody > tr > td:last-child {
+		padding-right : 30px;
+		}
+		
+	div.container > div.table > table > tbody > tr > td.image {
+		width : 120px;
+		}
+		
+	div.container > div.table > table > tbody > tr > td.name {
+		max-width : 30%;
+		}
+		
+	div.container > div.table > table > tbody > tr > td.order {
+		width : 180px;
+		}
+
+	div.container > div.table > table > tbody > tr > td.size > span,
+	div.container > div.table > table > tbody > tr > td.count > span,
+	div.container > div.table > table > tbody > tr > td.available > span,
+	div.container > div.table > table > tbody > tr > td.price > span {
+		font : normal 16px/50px "Regular", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > div.form.order {
+		width : calc(100% - 120px);
+		max-width : 1160px;
+		padding : 60px;
+		}
+		
+	div.container > div.form.order > form > div > span {
+		padding : 15px 0;
+		font : normal 28px/30px "Bold", Arial, Tahoma, Verdana, sans-serif;
+		}
+	}
+	
+@media (min-width : 1041px) and (max-width : 1400px) {
+	div.container > div.table,
+	div.container > div.properties {
+		max-width : 1280px;
+		padding : 0 50px;
+		}
+	
+	div.container > div.properties > ul {
+		padding : 50px;
+		justify-content : space-between;
+		-webkit-justify-content : space-between;
+		-ms-justify-content : space-between;
+		}
+		
+	div.container > div.properties > ul > li {
+		background-position : 50% 0;
+		width : 30%;
+		padding-top : 85px;
+		}
+		
+	div.container > div.table > table > tbody > tr {
+		padding : 25px 0;
+		justify-content : space-between;
+		-webkit-justify-content : space-between;
+		-ms-justify-content : space-between;
+		}
+		
+	div.container > div.table > table > tbody > tr > td {
+		padding-left : 25px;
+		}
+		
+	div.container > div.table > table > tbody > tr > td:last-child {
+		padding-right : 25px;
+		}
+		
+	div.container > div.table > table > tbody > tr > td.image {
+		width : 120px;
+		}
+		
+	div.container > div.table > table > tbody > tr > td.name {
+		width : 25%;
+		}
+		
+	div.container > div.table > table > tbody > tr > td.order {
+		width : 180px;
+		}
+
+	div.container > div.table > table > tbody > tr > td.size > span,
+	div.container > div.table > table > tbody > tr > td.count > span,
+	div.container > div.table > table > tbody > tr > td.available > span,
+	div.container > div.table > table > tbody > tr > td.price > span {
+		font : normal 16px/50px "Regular", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > div.form.order {
+		width : calc(100% - 100px);
+		max-width : 1180px;
+		padding : 50px;
+		}
+		
+	div.container > div.form.order > form > div > span {
+		padding : 15px 0;
+		font : normal 26px/30px "Bold", Arial, Tahoma, Verdana, sans-serif;
+		}
+	}
+	
+@media (min-width : 861px) and (max-width : 1040px) {
+	div.container > div.table,
+	div.container > div.properties {
+		padding : 0 40px;
+		}
+		
+	div.container > div.properties > ul {
+		padding : 40px;
+		justify-content : space-between;
+		-webkit-justify-content : space-between;
+		-ms-justify-content : space-between;
+		}
+		
+	div.container > div.properties > ul > li {
+		background-position : 50% 0;
+		width : 30%;
+		padding-top : 85px;
+		}
+		
+	div.container > div.table > table > tbody > tr {
+		padding : 20px 0;
+		justify-content : space-between;
+		-webkit-justify-content : space-between;
+		-ms-justify-content : space-between;
+		flex-wrap : wrap;
+		-webkit-flex-wrap : wrap;
+		-ms-flex-wrap : wrap;
+		}
+		
+	div.container > div.table > table > tbody > tr > td {
+		padding-left : 20px;
+		}
+		
+	div.container > div.table > table > tbody > tr > td:last-child {
+		padding-right : 20px;
+		}
+		
+	div.container > div.table > table > tbody > tr > td.image {
+		width : 15%;
+		}
+		
+	div.container > div.table > table > tbody > tr > td.name {
+		width : 85%;
+		padding-right : 200px;
+		}
+		
+	div.container > div.table > table > tbody > tr > td.order {
+		position : absolute;
+		top : 20px;
+		right : 0;
+		width : 180px;
+		}
+		
+	div.container > div.table > table > tbody > tr > td.price {
+		padding-right : 20px;
+		}
+		
+	div.container > div.table > table > tbody > tr > td.size > span,
+	div.container > div.table > table > tbody > tr > td.count > span,
+	div.container > div.table > table > tbody > tr > td.available > span,
+	div.container > div.table > table > tbody > tr > td.price > span {
+		padding-top : 20px;
+		font : normal 16px/20px "Regular", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > div.form.order {
+		width : calc(100% - 80px);
+		padding : 40px;
+		}
+		
+	div.container > div.form.order > form > div > span {
+		padding : 15px 0;
+		font : normal 24px/30px "Bold", Arial, Tahoma, Verdana, sans-serif;
+		}
+	}
+	
+@media (min-width : 481px) and (max-width : 860px) {
+	div.container > div.table,
+	div.container > div.properties {
+		padding : 0 30px;
+		}
+	
+	div.container > div.properties > ul {
+		padding : 30px;
+		flex-wrap : wrap;
+		-webkit-flex-wrap : wrap;
+		-ms-flex-wrap : wrap;
+		}
+		
+	div.container > div.properties > ul > li {
+		width : 100%;
+		min-height : 85px;
+		padding-left : 100px;
+		}
+	
+	div.container > div.properties > ul > li:first-child {
+		background-position : 0 0;
+		}
+	
+	div.container > div.properties > ul > li:not(:first-child) {
+		background-position : 0 15px;
+		padding-top : 15px;
+		}
+		
+	div.container > div.table > table > tbody > tr {
+		padding : 15px 0;
+		justify-content : space-between;
+		-webkit-justify-content : space-between;
+		-ms-justify-content : space-between;
+		flex-wrap : wrap;
+		-webkit-flex-wrap : wrap;
+		-ms-flex-wrap : wrap;
+		}
+		
+	div.container > div.table > table > tbody > tr > td {
+		padding-left : 15px;
+		}
+		
+	div.container > div.table > table > tbody > tr > td.image {
+		width : 120px;
+		}
+		
+	div.container > div.table > table > tbody > tr > td.name {
+		width : calc(100% - 120px);
+		padding-right : 15px;
+		}
+		
+	div.container > div.table > table > tbody > tr > td.order {
+		width : 100%;
+		}
+		
+	div.container > div.table > table > tbody > tr > td.order > button {
+		margin : 0 auto;
+		}
+		
+	div.container > div.table > table > tbody > tr > td.price {
+		padding-right : 15px;
+		}
+		
+	div.container > div.table > table > tbody > tr > td.size > span,
+	div.container > div.table > table > tbody > tr > td.count > span,
+	div.container > div.table > table > tbody > tr > td.available > span,
+	div.container > div.table > table > tbody > tr > td.price > span {
+		font : normal 16px/50px "Regular", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > div.form.order {
+		width : calc(100% - 60px);
+		padding : 30px;
+		}
+		
+	div.container > div.form.order > form > div > span {
+		padding : 10px 0;
+		font : normal 22px/30px "Bold", Arial, Tahoma, Verdana, sans-serif;
+		}
+	}
+	
+@media (max-width : 480px) {
+	div.container > div.table,
+	div.container > div.properties {
+		padding : 0 20px;
+		}
+		
+	div.container > div.properties > ul {
+		padding : 20px;
+		flex-wrap : wrap;
+		-webkit-flex-wrap : wrap;
+		-ms-flex-wrap : wrap;
+		}
+		
+	div.container > div.properties > ul > li {
+		width : 100%;
+		padding-top : 85px;
+		}
+		
+	div.container > div.properties > ul > li:first-child {
+		background-position : 50% 0;
+		padding-top : 75px;
+		}
+		
+	div.container > div.properties > ul > li:not(:first-child) {
+		background-position : 50% 20px;
+		padding-top : 95px;
+		}
+		
+	div.container > div.table > table > tbody > tr {
+		padding : 10px 0;
+		justify-content : space-between;
+		-webkit-justify-content : space-between;
+		-ms-justify-content : space-between;
+		flex-wrap : wrap;
+		-webkit-flex-wrap : wrap;
+		-ms-flex-wrap : wrap;
+		}
+		
+	div.container > div.table > table > tbody > tr > td {
+		padding-left : 10px;
+		}
+		
+	div.container > div.table > table > tbody > tr > td.image {
+		width : 100%;
+		}
+		
+	div.container > div.table > table > tbody > tr > td.name {
+		width : 100%;
+		padding-top : 10px;
+		padding-bottom : 10px;
+		}
+		
+	div.container > div.table > table > tbody > tr > td.order {
+		padding-top : 10px;
+		width : 100%;
+		}
+		
+	div.container > div.table > table > tbody > tr > td.order > button {
+		margin : 0 auto;
+		}
+	
+	div.container > div.table > table > tbody > tr > td.name,
+	div.container > div.table > table > tbody > tr > td.image,
+	div.container > div.table > table > tbody > tr > td.count,	
+	div.container > div.table > table > tbody > tr > td.price {
+		padding-right : 10px;
+		}
+		
+	div.container > div.table > table > tbody > tr > td.size,
+	div.container > div.table > table > tbody > tr > td.count,
+	div.container > div.table > table > tbody > tr > td.available,
+	div.container > div.table > table > tbody > tr > td.price {
+		width : 50%;
+		}
+		
+	div.container > div.table > table > tbody > tr > td.size > span,
+	div.container > div.table > table > tbody > tr > td.count > span,
+	div.container > div.table > table > tbody > tr > td.available > span,
+	div.container > div.table > table > tbody > tr > td.price > span {
+		font : normal 16px/30px "Regular", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > div.form.order {
+		width : calc(100% - 40px);
+		padding : 20px;
+		}
+		
+	div.container > div.form.order > form > div > span {
+		padding : 5px 0;
+		font : normal 20px/30px "Bold", Arial, Tahoma, Verdana, sans-serif;
+		}
+	}
