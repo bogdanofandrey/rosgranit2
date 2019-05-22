@@ -303,11 +303,11 @@ $(document).mouseup(function(e) {
 			$('div.callback').removeClass('opened');
 			}
     	}
-	if (!$('div.choose-items > ul').is(e.target) && $('div.choose-items > ul').has(e.target).length === 0 && $('div.choose-items > ul:visible').length!=0) {
+	/* if (!$('div.choose-items > ul').is(e.target) && $('div.choose-items > ul').has(e.target).length === 0 && $('div.choose-items > ul:visible').length!=0) {
 		$('div.choose-items > ul').css({'display' : 'none'});
 		if ($('div.choose-items > span').hasClass('selected')) {
 			$('div.choose-items > span').removeClass('selected');
 			}
-    	}
+    	} */
     return false;
 	});
