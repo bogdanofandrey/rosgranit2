@@ -234,6 +234,9 @@ $(document).ready(function() {
 		if ($(this).hasClass('active')) {
 			/* $(this).parents('form').submit(); - убрать комментирование в боевом режиме, кусок ниже удалить */
 			$('div.form.'+ $(this).data('form')).addClass('success');
+			$('html, body').stop().animate({
+				scrollTop: $('#' + $(this).data('form')).offset().top - $('div.container > header').outerHeight()
+				}, 600);
 			}
 		});
 	clear($('.field'));
