@@ -51,12 +51,12 @@ function resize() {
 				});
 			}, 50);
 		}
-	if ($('div.choose-items > ul').length!==0) {
+	/* if ($('div.choose-items > ul').length!==0) {
 		$("div.choose-items > ul").css({'display' : 'none'});
 		}
 	if ($('div.choose-items > span').hasClass('selected')) {
 		$('div.choose-items > span').removeClass('selected');
-		}
+		} */
 	}
 
 function clear(elements) {
@@ -115,7 +115,7 @@ function isRequire(classname) {
 
 function isChoice() {	
 	if ($('div.choose-items > ul > li.selected').lenght !== 0 && $('.choice').lenght !== 0) {
-		$('div.choose-items > span').html($('div.choose-items > ul > li.selected').html());		
+		/* $('div.choose-items > span').html($('div.choose-items > ul > li.selected').html()); */	
 		$('.choice').removeClass('selected');
 		if ($('div.choose-items > ul > li.selected').data('class')) {
 			$('.choice.' + $('div.choose-items > ul > li.selected').data('class')).addClass('selected');
@@ -252,16 +252,16 @@ $(document).ready(function() {
 			$('div.container > article > div > ul.service.' + $(this).data('class')).addClass('selected');
 			}
 		});
-	$('div.choose-items').on('click', 'span', function() {
+	/* $('div.choose-items').on('click', 'span', function() {
 		var position = $(this).position();
 		var isHeight = position.top + $(this).outerHeight() - 1;
 		$('div.choose-items > ul').css({'display' : 'block', 'left' : position.left + 'px', 'top' : isHeight + 'px', 'width' : $(this).outerWidth() + 'px'});			
 		if (!$(this).hasClass('selected')) {
 			$(this).addClass('selected');
 			}
-		});
+		}); */
 	$('div.choose-items > ul > li').click(function() {
-		$('div.choose-items > span').html($(this).html());		
+		/* $('div.choose-items > span').html($(this).html()); */
 		$('div.choose-items > ul > li').removeClass('selected');
 		$(this).addClass('selected');
 		if ($('div.choose-items > span').hasClass('selected')) {
@@ -274,7 +274,7 @@ $(document).ready(function() {
 		else {
 			$('.choice').addClass('selected');
 			}
-		$('div.choose-items > ul').css({'display' : 'none'});
+		/* $('div.choose-items > ul').css({'display' : 'none'}); */
 		});		
 	$('div.container > div.table > table > tbody > tr > td.order > button').on('click', function() {
 		$('div.choose-items').css('display', 'none');
