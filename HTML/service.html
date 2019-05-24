@@ -6,23 +6,75 @@
     	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0" />
 		<meta name="keywords" content="статьи" />
     	<meta name="description" content ="Данный раздел призван помочь найти ответы на часто возникающие вопросы" />
-    	<link rel="stylesheet" href="css/fonts.css?190520191320" />
-    	<link rel="stylesheet" href="css/default.css?190520191320" />
-    	<link rel="stylesheet" href="css/style.css?190520191320" />
-    	<link rel="stylesheet" href="css/header.css?190520191320" />
-    	<link rel="stylesheet" href="css/nav.css?190520191320" />
-    	<link rel="stylesheet" href="css/article.css?190520191320" />
-    	<link rel="stylesheet" href="css/service.css?190520191320" />
-    	<link rel="stylesheet" href="css/footer.css?190520191320" />
-    	<link rel="stylesheet" href="css/form.css?190520191320" />
-    	<link rel="stylesheet" href="css/callback.css?190520191320" />
-		<script defer src="js/jquery.js?190520191320"></script>
-		<script defer src="js/swiper.js?190520191320"></script>
-		<script defer src="js/inputmask.js?190520191320"></script>
-		<script defer src="js/template.js?190520191320"></script>
+    	<link rel="stylesheet" href="css/fonts.css?240520191213" />
+    	<link rel="stylesheet" href="css/default.css?240520191213" />
+    	<link rel="stylesheet" href="css/style.css?240520191213" />
+    	<link rel="stylesheet" href="css/header.css?240520191213" />
+    	<link rel="stylesheet" href="css/nav.css?240520191213" />
+    	<link rel="stylesheet" href="css/article.css?240520191213" />
+    	<link rel="stylesheet" href="css/service.css?240520191213" />
+    	<link rel="stylesheet" href="css/footer.css?240520191213" />
+    	<link rel="stylesheet" href="css/form.css?240520191213" />
+    	<link rel="stylesheet" href="css/callback.css?240520191213" />
+    	<link rel="stylesheet" href="css/gager.css?240520191213" />
+		<script defer src="js/jquery.js?240520191213"></script>
+		<script defer src="js/swiper.js?240520191213"></script>
+		<script defer src="js/inputmask.js?240520191213"></script>
+		<script defer src="js/template.js?240520191213"></script>
 		<title>«Росгранит» — услуги</title>
 	</head>
 	<body onload="resize();" onresize="resize();">
+		<div class="gager">
+			<button type="button"></button>
+			<div class="form cg">
+				<div>
+					<span>Спасибо!</span>
+					<p>В ближайшее время с Вами свяжется наш специалист и ответит на все, интересующие Вас, вопросы</p>
+				</div>
+				<form name="application" method="post" action="#">
+					<span>Заказ обучающего семинара</span>
+					<p>Оставьте ваши контактные данные и мы свяжемся с вами, чтобы подробнее рассказать о семинаре</p>
+					<div>
+						<div>
+							<ul>
+								<li class="required">
+									<input class="field" type="text" name="uname" value="" data-form="cg" />
+									<span>
+										<span>Ваше имя</span>
+									</span>
+								</li>
+								<li class="required">
+									<input class="field" type="tel" name="uphone" value="" data-form="cg" />
+									<span>
+										<span>Ваш телефон</span>
+									</span>
+								</li>
+								<li class="required">
+									<input class="field" type="email" name="uemail" value="" data-form="cg" />
+									<span>
+										<span>Ваш E-mail</span>
+									</span>
+								</li>
+								<li class="required">
+									<input class="field" type="text" name="uaddr" value="" data-form="cg" />
+									<span>
+										<span>Ваш адрес</span>
+									</span>
+								</li>
+							</ul>
+						</div>
+						<div class="required consent">
+							<input type="checkbox" name="consent" value="Y" />
+							<span class="checkbox" data-form="cg"></span>
+							<span>Даю <a href="#" title="согласие">согласие</a> на обработку персональных данных</span>
+						</div>
+						<div>
+							<button type="button" data-form="cg">Заказать</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
 		<div class="callback">
 			<button type="button"></button>
 			<div class="form cb">
