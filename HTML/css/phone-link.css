@@ -1,7 +1,15 @@
 .phone_link{
   color:#ffffff;
+    text-decoration: inherit;
+    font-size:inherit;
+    font-style:inherit;
+    font-weight:inherit;
 }
 
 .phone_link a{
   color:#ffffff;
+    text-decoration: inherit;
+    font-size:inherit;
+    font-style:inherit;
+    font-weight:inherit;
 }
