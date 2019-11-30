@@ -1,0 +1,436 @@
+@charset "UTF-8";
+
+div.container > article > div.accent,
+div.container > article > div.brief,
+div.container > article > div.content {
+	position : relative;
+	margin : 0 auto;
+	}
+
+div.container > article > div.accent,
+div.container > article > div.brief {
+	max-width : 1280px;
+	text-align : center;
+	color : rgba(143, 143, 143, 1);
+	}
+
+div.container > article > div.content {
+	max-width : 960px;
+	}
+	
+div.container > article strong {
+	color : rgba(255, 255, 255, 1);
+	}
+
+div.container > article h1,
+div.container > article h2,
+div.container > article h3 {
+	position : relative;
+	margin : 0 auto;
+	color : rgba(255, 255, 255, 1);
+	text-align : center;
+	}
+
+div.container > article h1 {	
+	padding : 20px 0;
+	}
+	
+div.container > article h2,
+div.container > article h3 {	
+	padding : 15px 0;
+	}
+	
+div.container > article h1::before {
+	position : absolute;
+	top : 100%;
+	left : calc(50% - 20px);
+	z-index : 10;
+	width : 40px;
+	height : 5px;
+	content : "";
+	background-color : rgba(213, 38, 38, 1);
+	}
+	
+div.container > article > div.content > ul {
+	padding : 0;
+	margin : 0;
+	list-style : none;
+	}
+	
+div.container > article > div.content > ul > li {
+	position : relative;
+	padding-left : 20px;
+	}
+	
+div.container > article > div.content > ul > li::before {
+	position : absolute;
+	top : 10px;
+	left : 0;
+	z-index : 10;
+	width : 6px;
+	height : 6px;
+	border-radius : 50%;
+	background-color : rgba(213, 38, 38, 1);
+	content : "";
+	}
+	
+div.container > article > div.brief > ul {
+	display : flex;
+	display : -webkit-box;
+	display : -webkit-flex;
+	display : -ms-flexbox;
+	flex-wrap : wrap;
+	-webkit-flex-wrap : wrap;
+	-ms-flex-wrap : wrap;
+	/* justify-content : space-between; */
+	padding : 0;
+	margin : 0;
+	list-style : none;	
+	}
+	
+div.container > article > div.brief > ul > li.choice {
+	display : none;
+	}
+	
+div.container > article > div.brief > ul > li.choice.selected {
+	display : block;
+	}
+	
+div.container > article > div.brief > ul > li > a {
+	position : relative;
+	display : block;
+	width : 100%;
+	padding-top : 60%;
+	text-decoration : none;
+	text-align : left;
+	overflow : hidden;
+	}
+	
+div.container > article > div.brief > ul > li > a::before {
+	display : block;
+	position : absolute;
+	top : 0;
+	left : 0;
+	z-index : 11;
+	width : 100%;
+	height : 100%;
+	background-color : rgba(26, 26, 26, 1);
+	content : "";
+	transition : opacity 0.25s ease;
+	}
+	
+div.container > article > div.brief > ul:not(.gallery) > li > a::before {
+	opacity : 0.5;
+	}
+	
+div.container > article > div.brief > ul.gallery > li > a::before {
+	opacity : 0;
+	}
+	
+div.container > article > div.brief > ul > li > a:hover::before {
+	opacity : 0.3;
+	}
+	
+div.container > article > div.brief > ul > li > a > img {
+	display : block;
+	width : inherit;
+	height : auto;
+	position : absolute;
+	top : 50%;
+	left : 50%;
+	z-index : 10;	
+	transform : translate(-50%, -50%);
+	}
+
+div.container > article > div.brief > ul > li > a > p {
+	position : absolute;
+	bottom : 0;
+	left : 0;
+	z-index : 20;
+	width : 100%;
+	margin : 0;
+	padding : 20px;
+	overflow : hidden;
+	transition : bottom 0.25s ease;
+	}
+	
+div.container > article > div.brief > ul > li > a > p > strong,
+div.container > article > div.brief > ul > li > a > p > span {
+	display : block;
+	color : rgba(255, 255, 255, 1);
+	}
+	
+div.container > article > div.brief > ul > li > a > p > span {
+	position : relative;
+	max-height : 0px;
+	opacity : 0;
+	overflow : hidden;
+	transition : all 0.25s ease;
+	}
+	
+div.container > article > div.brief > ul > li > a:hover > p > span {
+	padding-top : 10px;
+	opacity : 0.5;
+	}
+
+@media (min-width : 1401px) {
+	div.container > article {
+		padding : 30px 0;
+		}
+	
+	div.container > article > div.accent,
+	div.container > article > div.brief,
+	div.container > article > div.content {
+		padding : 30px 60px;
+		}
+		
+	div.container > article > div.accent {
+		margin-bottom : 60px;
+		}
+		
+	div.container > article > div.brief {
+		font : normal 22px/32px "Regular", Arial, Tahoma, Verdana, sans-serif;
+		}
+	
+	div.container > article > div.accent,
+	div.container > article > div.content {
+		font : normal 20px/32px "Regular", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > article h1 {
+		font : normal 38px/38px "Bold", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > article h2,
+	div.container > article h3 {
+		font : normal 30px/30px "Bold", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > article > div.brief > ul > li {
+		width : 32.3333%;
+		margin : 1% 1% 0 0;
+		}
+		
+	div.container > article > div.brief > ul > li > a > p > strong {
+		font : normal 26px/26px "Bold", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > article > div.brief > ul > li > a > p > span {
+		font : normal 18px/26px "Regular", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > article > div.brief > ul > li > a:hover > p > span {
+		max-height : 130px;
+		}
+		
+	div.container > article > div.brief > ul > li.pagination {
+		padding : 60px 0 0 0;
+		}
+	}
+	
+@media (min-width : 1041px) and (max-width : 1400px) {
+	div.container > article {
+		padding : 25px 0;
+		}
+	
+	div.container > article > div.accent,
+	div.container > article > div.brief,
+	div.container > article > div.content {
+		padding : 25px 50px;
+		}
+		
+	div.container > article > div.accent {
+		margin-bottom : 50px;
+		}
+		
+	div.container > article > div.brief {
+		font : normal 20px/28px "Regular", Arial, Tahoma, Verdana, sans-serif;
+		}
+	
+	div.container > article > div.accent,
+	div.container > article > div.content {
+		font : normal 18px/28px "Regular", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > article h1 {
+		font : normal 36px/36px "Bold", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > article h2,
+	div.container > article h3 {
+		font : normal 28px/28px "Bold", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > article > div.brief > ul > li {
+		width : 32.3333%;
+		margin : 1% 1% 0 0;
+		}
+		
+	div.container > article > div.brief > ul > li > a > p > strong {
+		font : normal 22px/22px "Bold", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > article > div.brief > ul > li > a > p > span {
+		font : normal 16px/22px "Regular", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > article > div.brief > ul > li > a:hover > p > span {
+		max-height : 100px;
+		}
+		
+	div.container > article > div.brief > ul > li.pagination {
+		padding : 50px 0 0 0;
+		}
+	}
+	
+@media (min-width : 861px) and (max-width : 1040px) {
+	div.container > article {
+		padding : 20px 0;
+		}
+	
+	div.container > article > div.accent,
+	div.container > article > div.brief,
+	div.container > article > div.content {
+		padding : 20px 40px;
+		}
+		
+	div.container > article > div.accent {
+		margin-bottom : 40px;
+		}
+		
+	div.container > article > div.brief {
+		font : normal 20px/28px "Regular", Arial, Tahoma, Verdana, sans-serif;
+		}
+	
+	div.container > article > div.accent,
+	div.container > article > div.content {
+		font : normal 18px/28px "Regular", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > article h1 {
+		font : normal 34px/34px "Bold", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > article h2,
+	div.container > article h3 {
+		font : normal 26px/26px "Bold", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > article > div.brief > ul > li.pagination {
+		padding : 40px 0 0 0;
+		}
+	}
+	
+@media (min-width : 481px) and (max-width : 860px) {
+	div.container > article {
+		padding : 30px 0 15px 0;
+		}
+	
+	div.container > article > div.accent,
+	div.container > article > div.brief,
+	div.container > article > div.content {
+		padding : 15px 30px;
+		}
+
+	div.container > article > div.accent {
+		margin-bottom : 30px;
+		}
+
+	div.container > article > div.brief {
+		font : normal 18px/24px "Regular", Arial, Tahoma, Verdana, sans-serif;
+		}
+	
+	div.container > article > div.accent,
+	div.container > article > div.content {
+		font : normal 16px/24px "Regular", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > article h1 {
+		font : normal 32px/32px "Bold", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > article h2,
+	div.container > article h3 {
+		font : normal 24px/24px "Bold", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > article > div.brief > ul > li.pagination {
+		padding : 30px 0 0 0;
+		}
+	}
+	
+@media (max-width : 480px) {
+	div.container > article {
+		padding : 25px 0 10px 0;
+		}
+	
+	div.container > article > div.accent,
+	div.container > article > div.brief,
+	div.container > article > div.content {
+		padding : 10px 20px;
+		}
+		
+	div.container > article > div.accent {
+		margin-bottom : 20px;
+		}
+		
+	div.container > article > div.brief {
+		font : normal 18px/24px "Regular", Arial, Tahoma, Verdana, sans-serif;
+		}
+	
+	div.container > article > div.accent,
+	div.container > article > div.content {
+		font : normal 16px/24px "Regular", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > article h1 {
+		font : normal 30px/30px "Bold", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > article h2,
+	div.container > article h3 {
+		font : normal 22px/22px "Bold", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > article > div.brief > ul > li.pagination {
+		padding : 20px 0 0 0;
+		}
+	}
+	
+@media (min-width : 769px) and (max-width : 1040px) {
+	div.container > article > div.brief > ul > li {
+		width : 49%;
+		margin : 1% 1% 0 0;
+		}
+		
+	div.container > article > div.brief > ul > li > a > p > strong {
+		font : normal 26px/26px "Bold", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > article > div.brief > ul > li > a > p > span {
+		font : normal 18px/26px "Regular", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > article > div.brief > ul > li > a:hover > p > span {
+		max-height : 130px;
+		}	
+	}
+	
+@media (max-width : 768px) {		
+	div.container > article > div.brief > ul > li {
+		width : 100%;
+		margin : 10px 0 0 0;
+		}
+		
+	div.container > article > div.brief > ul > li > a > p > strong {
+		font : normal 22px/22px "Bold", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > article > div.brief > ul > li > a > p > span {
+		font : normal 16px/22px "Regular", Arial, Tahoma, Verdana, sans-serif;
+		}
+		
+	div.container > article > div.brief > ul > li > a:hover > p > span {
+		max-height : 80px;
+		}
+	}
